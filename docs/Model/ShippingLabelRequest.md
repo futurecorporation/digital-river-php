@@ -1,0 +1,13 @@
+# # ShippingLabelRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**order_id** | **string** | The identifier of the order in Digital River&#39;s system. |
+**label_format** | **string** | The format of the label&#39;s data file. |
+**shipping_choice** | [**\DigitalRiver\ApiSdk\Model\ShippingRequest**](ShippingRequest.md) |  | [optional]
+**ship_from** | [**\DigitalRiver\ApiSdk\Model\GLShipFrom**](GLShipFrom.md) |  | [optional]
+**packages** | [**\DigitalRiver\ApiSdk\Model\PackageRequest[]**](PackageRequest.md) |  |
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

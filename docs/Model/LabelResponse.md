@@ -1,0 +1,13 @@
+# # LabelResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**height** | **int** | The label’s height in inches. | [optional]
+**width** | **int** | The label’s width in inches. | [optional]
+**format** | **string** | The format of the label&#39;s data file. | [optional]
+**file** | **string** | The shipping label data. | [optional]
+**file_url** | **string** | The URL of the shipping label file. | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
