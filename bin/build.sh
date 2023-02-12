@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+# set -x
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." &>/dev/null && pwd)"
+
+echo ""
+echo "------------------------------------------"
+echo "Generate DR PHP client ..."
+echo "------------------------------------------"
+echo ""
+
+# remove generated files
+rm -rf docs
+rm -rf lib
+
+# re-generate 
+docker run --rm -v $BASEDIR:/local openapitools/openapi-generator-cli \
+  generate \
+  -i "/local/api-specs/DR-(2021-12-13).json" \
+  -g php \
+  -p artifactVersion=2023 \
+  -p invokerPackage=DigitalRiver\\ApiSdk \
+  -p packageName=DigitalRiver \
+  -o /local
+
+echo ""
+echo "------------------------------------------"
+echo "Generate DR PHP client ... Done!" 
+echo "------------------------------------------"
+echo "" 
