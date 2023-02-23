@@ -15,7 +15,7 @@ echo ""
 rm -rf docs
 rm -rf lib
 
-# re-generate 
+# generate 
 docker run --rm -v $BASEDIR:/local openapitools/openapi-generator-cli \
   generate \
   -i "/local/api-specs/DR-(2021-12-13).json" \
