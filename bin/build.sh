@@ -18,7 +18,7 @@ rm -rf lib
 # generate 
 docker run --rm -v $BASEDIR:/local openapitools/openapi-generator-cli \
   generate \
-  -i "https://www.digitalriver.com/docs/digital-river-api-reference/2021-12-13.json" \
+  -i "/local/api/2021-12-13.json" \
   -g php \
   -p artifactVersion=2023 \
   -p invokerPackage=DigitalRiver\\ApiSdk \

@@ -75,7 +75,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'customer_type' => '\DigitalRiver\ApiSdk\Model\CustomerType',
         'purchase_location' => '\DigitalRiver\ApiSdk\Model\PurchaseLocation',
         'shipping_choice' => '\DigitalRiver\ApiSdk\Model\ShippingRequest',
-        'items' => '\DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem',
+        'items' => '\DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]',
         'upstream_id' => 'string',
         'metadata' => 'array<string,mixed>'
     ];
@@ -925,7 +925,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets items
      *
-     * @return \DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem|null
+     * @return \DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]|null
      */
     public function getItems()
     {
@@ -935,7 +935,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets items
      *
-     * @param \DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem|null $items items
+     * @param \DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]|null $items items
      *
      * @return self
      */

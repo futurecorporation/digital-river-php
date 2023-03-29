@@ -24694,7 +24694,10 @@
             "$ref" : "#/components/schemas/ShippingRequest"
           },
           "items" : {
-            "$ref" : "#/components/schemas/SkuUpdateRequestItem"
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SkuUpdateRequestItem"
+            }
           },
           "upstreamId" : {
             "type" : "string",
