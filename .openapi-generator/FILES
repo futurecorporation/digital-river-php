@@ -79,6 +79,7 @@ docs/Model/DropInCheckoutLinkResponse.md
 docs/Model/DropInCheckoutRequest.md
 docs/Model/DropInCheckoutSession.md
 docs/Model/DropInOptionsRequest.md
+docs/Model/DropInShippingQuote.md
 docs/Model/DropInSku.md
 docs/Model/Duties.md
 docs/Model/Error.md
@@ -385,6 +386,7 @@ lib/Model/DropInCheckoutLinkResponse.php
 lib/Model/DropInCheckoutRequest.php
 lib/Model/DropInCheckoutSession.php
 lib/Model/DropInOptionsRequest.php
+lib/Model/DropInShippingQuote.php
 lib/Model/DropInSku.php
 lib/Model/Duties.php
 lib/Model/Error.php

@@ -1,4 +1,4 @@
-# # ShippingMethodQuote
+# # DropInShippingQuote
 
 ## Properties
 

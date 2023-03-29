@@ -15,7 +15,6 @@ Name | Type | Description | Notes
 **bill_to** | [**\DigitalRiver\ApiSdk\Model\IntegrationAddress**](IntegrationAddress.md) |  | [optional]
 **ship_from** | [**\DigitalRiver\ApiSdk\Model\ShipFrom**](ShipFrom.md) |  | [optional]
 **discount** | [**\DigitalRiver\ApiSdk\Model\Discount**](Discount.md) |  | [optional]
-**shipping_discount** | [**\DigitalRiver\ApiSdk\Model\Discount**](Discount.md) |  | [optional]
 **browser_ip** | **string** | The IP address of the browser used by the customer when checking out. | [optional]
 **application_id** | **string** | An arbitrary identifier that can be used to track the application type. | [optional] [readonly]
 **locale** | **string** | A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code. | [optional]

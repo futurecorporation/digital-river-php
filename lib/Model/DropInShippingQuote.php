@@ -1,6 +1,6 @@
 <?php
 /**
- * Tracking
+ * DropInShippingQuote
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \DigitalRiver\ApiSdk\ObjectSerializer;
 
 /**
- * Tracking Class Doc Comment
+ * DropInShippingQuote Class Doc Comment
  *
  * @category Class
  * @package  DigitalRiver\ApiSdk
@@ -40,7 +40,7 @@ use \DigitalRiver\ApiSdk\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
+class DropInShippingQuote implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Tracking';
+    protected static $openAPIModelName = 'DropInShippingQuote';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tracking_number' => 'string',
-        'tracking_url' => 'string'
+        'description' => 'string',
+        'service_level' => 'string',
+        'shipping_terms' => 'string',
+        'amount' => 'float',
+        'ship_from' => '\DigitalRiver\ApiSdk\Model\GLShipFrom'
     ];
 
     /**
@@ -69,8 +72,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tracking_number' => null,
-        'tracking_url' => null
+        'description' => null,
+        'service_level' => null,
+        'shipping_terms' => null,
+        'amount' => 'double',
+        'ship_from' => null
     ];
 
     /**
@@ -79,8 +85,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'tracking_number' => true,
-		'tracking_url' => true
+        'description' => false,
+		'service_level' => false,
+		'shipping_terms' => false,
+		'amount' => false,
+		'ship_from' => false
     ];
 
     /**
@@ -169,8 +178,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'tracking_number' => 'trackingNumber',
-        'tracking_url' => 'trackingUrl'
+        'description' => 'description',
+        'service_level' => 'serviceLevel',
+        'shipping_terms' => 'shippingTerms',
+        'amount' => 'amount',
+        'ship_from' => 'shipFrom'
     ];
 
     /**
@@ -179,8 +191,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'tracking_number' => 'setTrackingNumber',
-        'tracking_url' => 'setTrackingUrl'
+        'description' => 'setDescription',
+        'service_level' => 'setServiceLevel',
+        'shipping_terms' => 'setShippingTerms',
+        'amount' => 'setAmount',
+        'ship_from' => 'setShipFrom'
     ];
 
     /**
@@ -189,8 +204,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'tracking_number' => 'getTrackingNumber',
-        'tracking_url' => 'getTrackingUrl'
+        'description' => 'getDescription',
+        'service_level' => 'getServiceLevel',
+        'shipping_terms' => 'getShippingTerms',
+        'amount' => 'getAmount',
+        'ship_from' => 'getShipFrom'
     ];
 
     /**
@@ -234,6 +252,21 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    public const SHIPPING_TERMS_DDP = 'DDP';
+    public const SHIPPING_TERMS_DAP = 'DAP';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getShippingTermsAllowableValues()
+    {
+        return [
+            self::SHIPPING_TERMS_DDP,
+            self::SHIPPING_TERMS_DAP,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -250,8 +283,11 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('tracking_number', $data ?? [], null);
-        $this->setIfExists('tracking_url', $data ?? [], null);
+        $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('service_level', $data ?? [], null);
+        $this->setIfExists('shipping_terms', $data ?? [], null);
+        $this->setIfExists('amount', $data ?? [], null);
+        $this->setIfExists('ship_from', $data ?? [], null);
     }
 
     /**
@@ -281,6 +317,15 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        $allowedValues = $this->getShippingTermsAllowableValues();
+        if (!is_null($this->container['shipping_terms']) && !in_array($this->container['shipping_terms'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'shipping_terms', must be one of '%s'",
+                $this->container['shipping_terms'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -297,69 +342,146 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets tracking_number
+     * Gets description
      *
      * @return string|null
      */
-    public function getTrackingNumber()
+    public function getDescription()
     {
-        return $this->container['tracking_number'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets tracking_number
+     * Sets description
      *
-     * @param string|null $tracking_number The tracking identifier provided by the carrier.
+     * @param string|null $description Shipping method description
      *
      * @return self
      */
-    public function setTrackingNumber($tracking_number)
+    public function setDescription($description)
     {
-        if (is_null($tracking_number)) {
-            array_push($this->openAPINullablesSetToNull, 'tracking_number');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('tracking_number', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($description)) {
+            throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
-        $this->container['tracking_number'] = $tracking_number;
+        $this->container['description'] = $description;
 
         return $this;
     }
 
     /**
-     * Gets tracking_url
+     * Gets service_level
      *
      * @return string|null
      */
-    public function getTrackingUrl()
+    public function getServiceLevel()
     {
-        return $this->container['tracking_url'];
+        return $this->container['service_level'];
     }
 
     /**
-     * Sets tracking_url
+     * Sets service_level
      *
-     * @param string|null $tracking_url The URL of the tracking page provided by the carrier.
+     * @param string|null $service_level service_level
      *
      * @return self
      */
-    public function setTrackingUrl($tracking_url)
+    public function setServiceLevel($service_level)
     {
-        if (is_null($tracking_url)) {
-            array_push($this->openAPINullablesSetToNull, 'tracking_url');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('tracking_url', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($service_level)) {
+            throw new \InvalidArgumentException('non-nullable service_level cannot be null');
         }
-        $this->container['tracking_url'] = $tracking_url;
+        $this->container['service_level'] = $service_level;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_terms
+     *
+     * @return string|null
+     */
+    public function getShippingTerms()
+    {
+        return $this->container['shipping_terms'];
+    }
+
+    /**
+     * Sets shipping_terms
+     *
+     * @param string|null $shipping_terms The terms of shipping.
+     *
+     * @return self
+     */
+    public function setShippingTerms($shipping_terms)
+    {
+        if (is_null($shipping_terms)) {
+            throw new \InvalidArgumentException('non-nullable shipping_terms cannot be null');
+        }
+        $allowedValues = $this->getShippingTermsAllowableValues();
+        if (!in_array($shipping_terms, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'shipping_terms', must be one of '%s'",
+                    $shipping_terms,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['shipping_terms'] = $shipping_terms;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return float|null
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param float|null $amount The shipping amount.
+     *
+     * @return self
+     */
+    public function setAmount($amount)
+    {
+        if (is_null($amount)) {
+            throw new \InvalidArgumentException('non-nullable amount cannot be null');
+        }
+        $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets ship_from
+     *
+     * @return \DigitalRiver\ApiSdk\Model\GLShipFrom|null
+     */
+    public function getShipFrom()
+    {
+        return $this->container['ship_from'];
+    }
+
+    /**
+     * Sets ship_from
+     *
+     * @param \DigitalRiver\ApiSdk\Model\GLShipFrom|null $ship_from ship_from
+     *
+     * @return self
+     */
+    public function setShipFrom($ship_from)
+    {
+        if (is_null($ship_from)) {
+            throw new \InvalidArgumentException('non-nullable ship_from cannot be null');
+        }
+        $this->container['ship_from'] = $ship_from;
 
         return $this;
     }
