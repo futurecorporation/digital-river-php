@@ -1,0 +1,11 @@
+# # BillingOptimization
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**subscription_id** | **string** | The unique identifier of the subscription. | [optional]
+**segment_id** | **string** | The unique identifier of the segment. | [optional]
+**renewal_attempt_number** | **float** | The number of renewal attempts. | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -48,6 +48,7 @@ docs/Model/BPay.md
 docs/Model/Battery.md
 docs/Model/Billing.md
 docs/Model/Billing1.md
+docs/Model/BillingOptimization.md
 docs/Model/Business.md
 docs/Model/Cancel.md
 docs/Model/Capture.md
@@ -186,6 +187,7 @@ docs/Model/OrderItemStateTransitions.md
 docs/Model/OrderRefund.md
 docs/Model/OrderRequest.md
 docs/Model/OrderStateTransitions.md
+docs/Model/OrderTracking.md
 docs/Model/Organization.md
 docs/Model/Owner.md
 docs/Model/PackageRequest.md
@@ -282,6 +284,8 @@ docs/Model/TaxIdentifierStateTransitions.md
 docs/Model/TaxIdentifiersInfo.md
 docs/Model/TokenInformation.md
 docs/Model/Tracking.md
+docs/Model/TrackingDetail.md
+docs/Model/TrackingItem.md
 docs/Model/UnitAttributes.md
 docs/Model/UpdateCheckoutRequest.md
 docs/Model/UpdateCustomerRequest.md
@@ -355,6 +359,7 @@ lib/Model/BPay.php
 lib/Model/Battery.php
 lib/Model/Billing.php
 lib/Model/Billing1.php
+lib/Model/BillingOptimization.php
 lib/Model/Business.php
 lib/Model/Cancel.php
 lib/Model/Capture.php
@@ -494,6 +499,7 @@ lib/Model/OrderItemStateTransitions.php
 lib/Model/OrderRefund.php
 lib/Model/OrderRequest.php
 lib/Model/OrderStateTransitions.php
+lib/Model/OrderTracking.php
 lib/Model/Organization.php
 lib/Model/Owner.php
 lib/Model/PackageRequest.php
@@ -590,6 +596,8 @@ lib/Model/TaxIdentifierStateTransitions.php
 lib/Model/TaxIdentifiersInfo.php
 lib/Model/TokenInformation.php
 lib/Model/Tracking.php
+lib/Model/TrackingDetail.php
+lib/Model/TrackingItem.php
 lib/Model/UnitAttributes.php
 lib/Model/UpdateCheckoutRequest.php
 lib/Model/UpdateCustomerRequest.php
@@ -614,3 +622,7 @@ lib/Model/WebhookUpdateRequestOauth.php
 lib/Model/WireTransfer.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/BillingOptimizationTest.php
+test/Model/OrderTrackingTest.php
+test/Model/TrackingDetailTest.php
+test/Model/TrackingItemTest.php

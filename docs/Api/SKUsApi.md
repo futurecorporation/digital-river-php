@@ -341,7 +341,7 @@ upsertSkus($id, $sku_upsert_request): \DigitalRiver\ApiSdk\Model\Sku
 
 Upserts a SKU
 
-Submit this request to upsert the specified SKU.
+Either creates or updates a SKU.
 
 ### Example
 
@@ -360,7 +360,7 @@ $apiInstance = new DigitalRiver\ApiSdk\Api\SKUsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | The SKU identifier.
+$id = 'id_example'; // string | The identifier of the SKU to update or create. If a SKU with this `id` exists, then Digital River uses the data in the request body to update the resource. Otherwise, Digital River uses that same data to create a new SKU resource and assigns it `id`.
 $sku_upsert_request = new \DigitalRiver\ApiSdk\Model\SkuUpsertRequest(); // \DigitalRiver\ApiSdk\Model\SkuUpsertRequest
 
 try {
@@ -375,7 +375,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| The SKU identifier. | |
+| **id** | **string**| The identifier of the SKU to update or create. If a SKU with this &#x60;id&#x60; exists, then Digital River uses the data in the request body to update the resource. Otherwise, Digital River uses that same data to create a new SKU resource and assigns it &#x60;id&#x60;. | |
 | **sku_upsert_request** | [**\DigitalRiver\ApiSdk\Model\SkuUpsertRequest**](../Model/SkuUpsertRequest.md)|  | [optional] |
 
 ### Return type

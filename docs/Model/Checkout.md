@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **customer_type** | [**\DigitalRiver\ApiSdk\Model\CustomerType**](CustomerType.md) |  | [optional]
 **selling_entity** | [**\DigitalRiver\ApiSdk\Model\SellingEntity**](SellingEntity.md) |  | [optional]
 **items** | [**\DigitalRiver\ApiSdk\Model\SkuItem[]**](SkuItem.md) |  | [optional]
+**billing_optimization** | [**\DigitalRiver\ApiSdk\Model\BillingOptimization**](BillingOptimization.md) |  | [optional]
 **shipping_choice** | [**\DigitalRiver\ApiSdk\Model\ShippingChoice**](ShippingChoice.md) |  | [optional]
 **payment** | [**\DigitalRiver\ApiSdk\Model\Payments**](Payments.md) |  | [optional]
 **disclosures** | [**\DigitalRiver\ApiSdk\Model\Disclosures**](Disclosures.md) |  | [optional]
