@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **customer_type** | [**\DigitalRiver\ApiSdk\Model\CustomerType**](CustomerType.md) |  | [optional]
 **purchase_location** | [**\DigitalRiver\ApiSdk\Model\PurchaseLocation**](PurchaseLocation.md) |  | [optional]
 **shipping_choice** | [**\DigitalRiver\ApiSdk\Model\ShippingRequest**](ShippingRequest.md) |  | [optional]
-**items** | [**\DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]**](SkuUpdateRequestItem.md) |  | [optional]
+**items** | [**\DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]**](SkuUpdateRequestItem.md) | fixed by liao | [optional]
 **upstream_id** | **string** | The upstream identifier. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 
