@@ -83,7 +83,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'ship_to' => '\DigitalRiver\ApiSdk\Model\Shipping',
         'bill_to' => '\DigitalRiver\ApiSdk\Model\Billing',
         'state' => 'string',
-        'state_transitions' => '\DigitalRiver\ApiSdk\Model\StateTransitions',
+        'state_transitions' => '\DigitalRiver\ApiSdk\Model\InvoiceStateTransitions',
         'payment' => '\DigitalRiver\ApiSdk\Model\Payments',
         'attempt_count' => 'int',
         'metadata' => 'array<string,mixed>',
@@ -171,7 +171,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
 		'ship_to' => false,
 		'bill_to' => false,
 		'state' => false,
-		'state_transitions' => false,
+		'state_transitions' => true,
 		'payment' => false,
 		'attempt_count' => false,
 		'metadata' => false,
@@ -1279,7 +1279,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets state_transitions
      *
-     * @return \DigitalRiver\ApiSdk\Model\StateTransitions|null
+     * @return \DigitalRiver\ApiSdk\Model\InvoiceStateTransitions|null
      */
     public function getStateTransitions()
     {
@@ -1289,14 +1289,21 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets state_transitions
      *
-     * @param \DigitalRiver\ApiSdk\Model\StateTransitions|null $state_transitions state_transitions
+     * @param \DigitalRiver\ApiSdk\Model\InvoiceStateTransitions|null $state_transitions state_transitions
      *
      * @return self
      */
     public function setStateTransitions($state_transitions)
     {
         if (is_null($state_transitions)) {
-            throw new \InvalidArgumentException('non-nullable state_transitions cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'state_transitions');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('state_transitions', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['state_transitions'] = $state_transitions;
 

@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **ship_to** | [**\DigitalRiver\ApiSdk\Model\Shipping**](Shipping.md) |  | [optional]
 **bill_to** | [**\DigitalRiver\ApiSdk\Model\Billing**](Billing.md) |  | [optional]
 **state** | **string** | The current state of the invoice. | [optional]
-**state_transitions** | [**\DigitalRiver\ApiSdk\Model\StateTransitions**](StateTransitions.md) |  | [optional]
+**state_transitions** | [**\DigitalRiver\ApiSdk\Model\InvoiceStateTransitions**](InvoiceStateTransitions.md) |  | [optional]
 **payment** | [**\DigitalRiver\ApiSdk\Model\Payments**](Payments.md) |  | [optional]
 **attempt_count** | **int** | The number of times Digital River has attempted to collect payment. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]

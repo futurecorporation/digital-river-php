@@ -138,6 +138,7 @@ docs/Model/InvoiceAttributes.md
 docs/Model/InvoiceItem.md
 docs/Model/InvoiceItemRequest.md
 docs/Model/InvoiceRequest.md
+docs/Model/InvoiceStateTransitions.md
 docs/Model/ItemShipping.md
 docs/Model/Klarna.md
 docs/Model/KlarnaAddress.md
@@ -449,6 +450,7 @@ lib/Model/InvoiceAttributes.php
 lib/Model/InvoiceItem.php
 lib/Model/InvoiceItemRequest.php
 lib/Model/InvoiceRequest.php
+lib/Model/InvoiceStateTransitions.php
 lib/Model/ItemShipping.php
 lib/Model/Klarna.php
 lib/Model/KlarnaAddress.php

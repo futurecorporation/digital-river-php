@@ -25658,6 +25658,40 @@
         "title": "Payco",
         "type": "object"
       },
+      "InvoiceStateTransitions": {
+        "description": "fixed by liao, modified from OrderStateTransitions",
+        "title": "InvoiceStateTransitions",
+        "type": "object",
+        "properties": {
+          "draft": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "open": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "void": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "paid": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "uncollectible": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "nullable": true,
+        "readOnly": true
+      },
       "OrderStateTransitions": {
         "title": "OrderStateTransitions",
         "type": "object",
@@ -29239,7 +29273,8 @@
             "enum": ["draft", "open", "void", "paid", "uncollectible"]
           },
           "stateTransitions": {
-            "$ref": "#/components/schemas/StateTransitions"
+            "description": "fixed by liao",
+            "$ref": "#/components/schemas/InvoiceStateTransitions"
           },
           "payment": {
             "$ref": "#/components/schemas/Payments"
