@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **organization** | [**\DigitalRiver\ApiSdk\Model\Organization**](Organization.md) |  | [optional]
 **shipping_choice** | [**\DigitalRiver\ApiSdk\Model\ShippingRequest**](ShippingRequest.md) |  | [optional]
 **discount** | [**\DigitalRiver\ApiSdk\Model\Discount**](Discount.md) |  | [optional]
+**billing_optimization** | [**\DigitalRiver\ApiSdk\Model\BillingOptimization**](BillingOptimization.md) |  | [optional]
 **items** | [**\DigitalRiver\ApiSdk\Model\SkuRequestItem[]**](SkuRequestItem.md) |  | [optional]
 **shipping_discount** | [**\DigitalRiver\ApiSdk\Model\Discount**](Discount.md) |  | [optional]
 **tax_inclusive** | **bool** | If &lt;code&gt;true&lt;/code&gt;, indicates that the prices supplied are tax inclusive. | [optional]

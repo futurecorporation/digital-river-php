@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **cancelled_amount** | **float** | Represents the total payment amount cancelled. | [optional] [readonly]
 **captured_amount** | **float** | Represents the total payment amount captured. | [optional] [readonly]
 **items** | [**\DigitalRiver\ApiSdk\Model\OrderItem[]**](OrderItem.md) |  | [optional]
+**billing_optimization** | [**\DigitalRiver\ApiSdk\Model\BillingOptimization**](BillingOptimization.md) |  | [optional]
 **invoice_pdfs** | [**\DigitalRiver\ApiSdk\Model\File[]**](File.md) | An array of links to downloadable PDF invoices. If no invoices exist yet, the array is null. | [optional]
 **credit_memo_pdfs** | [**\DigitalRiver\ApiSdk\Model\File[]**](File.md) | An array of links to downloadable PDF credit memos. If no credit memos exist yet, the array is null. | [optional]
 **request_to_be_forgotten** | **bool** | If &lt;code&gt;true&lt;/code&gt; indicates a user placing an order has requested this order be forgotten. | [optional] [default to false]

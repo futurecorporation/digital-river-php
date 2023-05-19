@@ -622,7 +622,3 @@ lib/Model/WebhookUpdateRequestOauth.php
 lib/Model/WireTransfer.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/BillingOptimizationTest.php
-test/Model/OrderTrackingTest.php
-test/Model/TrackingDetailTest.php
-test/Model/TrackingItemTest.php

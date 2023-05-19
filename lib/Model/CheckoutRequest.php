@@ -72,6 +72,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'organization' => '\DigitalRiver\ApiSdk\Model\Organization',
         'shipping_choice' => '\DigitalRiver\ApiSdk\Model\ShippingRequest',
         'discount' => '\DigitalRiver\ApiSdk\Model\Discount',
+        'billing_optimization' => '\DigitalRiver\ApiSdk\Model\BillingOptimization',
         'items' => '\DigitalRiver\ApiSdk\Model\SkuRequestItem[]',
         'shipping_discount' => '\DigitalRiver\ApiSdk\Model\Discount',
         'tax_inclusive' => 'bool',
@@ -106,6 +107,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'organization' => null,
         'shipping_choice' => null,
         'discount' => null,
+        'billing_optimization' => null,
         'items' => null,
         'shipping_discount' => null,
         'tax_inclusive' => null,
@@ -138,6 +140,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 		'organization' => false,
 		'shipping_choice' => true,
 		'discount' => false,
+		'billing_optimization' => false,
 		'items' => false,
 		'shipping_discount' => false,
 		'tax_inclusive' => false,
@@ -250,6 +253,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'organization' => 'organization',
         'shipping_choice' => 'shippingChoice',
         'discount' => 'discount',
+        'billing_optimization' => 'billingOptimization',
         'items' => 'items',
         'shipping_discount' => 'shippingDiscount',
         'tax_inclusive' => 'taxInclusive',
@@ -282,6 +286,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'organization' => 'setOrganization',
         'shipping_choice' => 'setShippingChoice',
         'discount' => 'setDiscount',
+        'billing_optimization' => 'setBillingOptimization',
         'items' => 'setItems',
         'shipping_discount' => 'setShippingDiscount',
         'tax_inclusive' => 'setTaxInclusive',
@@ -314,6 +319,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'organization' => 'getOrganization',
         'shipping_choice' => 'getShippingChoice',
         'discount' => 'getDiscount',
+        'billing_optimization' => 'getBillingOptimization',
         'items' => 'getItems',
         'shipping_discount' => 'getShippingDiscount',
         'tax_inclusive' => 'getTaxInclusive',
@@ -397,6 +403,7 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('organization', $data ?? [], null);
         $this->setIfExists('shipping_choice', $data ?? [], null);
         $this->setIfExists('discount', $data ?? [], null);
+        $this->setIfExists('billing_optimization', $data ?? [], null);
         $this->setIfExists('items', $data ?? [], null);
         $this->setIfExists('shipping_discount', $data ?? [], null);
         $this->setIfExists('tax_inclusive', $data ?? [], null);
@@ -864,6 +871,33 @@ class CheckoutRequest implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable discount cannot be null');
         }
         $this->container['discount'] = $discount;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_optimization
+     *
+     * @return \DigitalRiver\ApiSdk\Model\BillingOptimization|null
+     */
+    public function getBillingOptimization()
+    {
+        return $this->container['billing_optimization'];
+    }
+
+    /**
+     * Sets billing_optimization
+     *
+     * @param \DigitalRiver\ApiSdk\Model\BillingOptimization|null $billing_optimization billing_optimization
+     *
+     * @return self
+     */
+    public function setBillingOptimization($billing_optimization)
+    {
+        if (is_null($billing_optimization)) {
+            throw new \InvalidArgumentException('non-nullable billing_optimization cannot be null');
+        }
+        $this->container['billing_optimization'] = $billing_optimization;
 
         return $this;
     }

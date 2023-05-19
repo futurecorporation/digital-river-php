@@ -88,6 +88,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
         'gift_card' => '\DigitalRiver\ApiSdk\Model\GiftCard',
         'amazon_pay' => 'object',
         'after_pay' => 'object',
+        'cc_avenue' => 'object',
         'flow' => 'string',
         'state' => 'string',
         'metadata' => 'array<string,mixed>',
@@ -135,6 +136,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
         'gift_card' => null,
         'amazon_pay' => null,
         'after_pay' => null,
+        'cc_avenue' => null,
         'flow' => null,
         'state' => null,
         'metadata' => null,
@@ -180,6 +182,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
 		'gift_card' => false,
 		'amazon_pay' => false,
 		'after_pay' => false,
+		'cc_avenue' => false,
 		'flow' => false,
 		'state' => false,
 		'metadata' => false,
@@ -305,6 +308,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
         'gift_card' => 'giftCard',
         'amazon_pay' => 'amazonPay',
         'after_pay' => 'afterPay',
+        'cc_avenue' => 'ccAvenue',
         'flow' => 'flow',
         'state' => 'state',
         'metadata' => 'metadata',
@@ -350,6 +354,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
         'gift_card' => 'setGiftCard',
         'amazon_pay' => 'setAmazonPay',
         'after_pay' => 'setAfterPay',
+        'cc_avenue' => 'setCcAvenue',
         'flow' => 'setFlow',
         'state' => 'setState',
         'metadata' => 'setMetadata',
@@ -395,6 +400,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
         'gift_card' => 'getGiftCard',
         'amazon_pay' => 'getAmazonPay',
         'after_pay' => 'getAfterPay',
+        'cc_avenue' => 'getCcAvenue',
         'flow' => 'getFlow',
         'state' => 'getState',
         'metadata' => 'getMetadata',
@@ -467,6 +473,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
     public const TYPE_IDEAL = 'ideal';
     public const TYPE_AMAZON_PAY = 'amazonPay';
     public const TYPE_AFTER_PAY = 'afterPay';
+    public const TYPE_CC_AVENUE = 'ccAvenue';
     public const FLOW_STANDARD = 'standard';
     public const FLOW_REDIRECT = 'redirect';
     public const FLOW_RECEIVER = 'receiver';
@@ -509,6 +516,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
             self::TYPE_IDEAL,
             self::TYPE_AMAZON_PAY,
             self::TYPE_AFTER_PAY,
+            self::TYPE_CC_AVENUE,
         ];
     }
 
@@ -590,6 +598,7 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('gift_card', $data ?? [], null);
         $this->setIfExists('amazon_pay', $data ?? [], null);
         $this->setIfExists('after_pay', $data ?? [], null);
+        $this->setIfExists('cc_avenue', $data ?? [], null);
         $this->setIfExists('flow', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
         $this->setIfExists('metadata', $data ?? [], null);
@@ -1510,6 +1519,33 @@ class Source implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable after_pay cannot be null');
         }
         $this->container['after_pay'] = $after_pay;
+
+        return $this;
+    }
+
+    /**
+     * Gets cc_avenue
+     *
+     * @return object|null
+     */
+    public function getCcAvenue()
+    {
+        return $this->container['cc_avenue'];
+    }
+
+    /**
+     * Sets cc_avenue
+     *
+     * @param object|null $cc_avenue cc_avenue
+     *
+     * @return self
+     */
+    public function setCcAvenue($cc_avenue)
+    {
+        if (is_null($cc_avenue)) {
+            throw new \InvalidArgumentException('non-nullable cc_avenue cannot be null');
+        }
+        $this->container['cc_avenue'] = $cc_avenue;
 
         return $this;
     }

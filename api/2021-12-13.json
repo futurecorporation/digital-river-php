@@ -4,7 +4,7 @@
     "title": "Digital River API Reference",
     "description": "removed by liao, too long",
     "version": "2023",
-    "x-generate-timestamp": "2023-04-13T20:41:59.090541Z",
+    "x-generate-timestamp": "2023-04-25T18:55:34.766154Z",
     "x-logo": {
       "url": "https://www.digitalriver.com/wp-content/uploads/sites/8/Digital-River-Logo_160x70.png",
       "backgroundColor": "#FFFFFF",
@@ -25641,6 +25641,9 @@
               "$ref": "#/components/schemas/SkuUpdateRequestItem"
             }
           },
+          "billingOptimization": {
+            "$ref": "#/components/schemas/BillingOptimization"
+          },
           "upstreamId": {
             "type": "string",
             "description": "The upstream identifier.",
@@ -28444,6 +28447,10 @@
         },
         "description": "The customer's shipping address."
       },
+      "CCAvenue": {
+        "title": "CCAvenue",
+        "type": "object"
+      },
       "Charge": {
         "title": "Charge",
         "type": "object",
@@ -30875,6 +30882,11 @@
             "type": "number",
             "description": "The number of renewal attempts.",
             "example": 1
+          },
+          "trackingId": {
+            "type": "string",
+            "description": "The unique identifier of the tracking.",
+            "example": "39784"
           }
         }
       },
@@ -31550,6 +31562,9 @@
           },
           "discount": {
             "$ref": "#/components/schemas/Discount"
+          },
+          "billingOptimization": {
+            "$ref": "#/components/schemas/BillingOptimization"
           },
           "items": {
             "type": "array",
@@ -32412,6 +32427,9 @@
               "$ref": "#/components/schemas/OrderItem"
             }
           },
+          "billingOptimization": {
+            "$ref": "#/components/schemas/BillingOptimization"
+          },
           "invoicePDFs": {
             "type": "array",
             "description": "An array of links to downloadable PDF invoices. If no invoices exist yet, the array is null.",
@@ -32589,6 +32607,9 @@
           },
           "discount": {
             "$ref": "#/components/schemas/Discount"
+          },
+          "billingOptimization": {
+            "$ref": "#/components/schemas/BillingOptimization"
           },
           "items": {
             "type": "array",
@@ -33143,7 +33164,8 @@
               "giftCard",
               "ideal",
               "amazonPay",
-              "afterPay"
+              "afterPay",
+              "ccAvenue"
             ]
           },
           "currency": {
@@ -33233,6 +33255,9 @@
           },
           "afterPay": {
             "$ref": "#/components/schemas/AfterPay"
+          },
+          "ccAvenue": {
+            "$ref": "#/components/schemas/CCAvenue"
           },
           "flow": {
             "type": "string",

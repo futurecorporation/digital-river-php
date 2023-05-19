@@ -59,7 +59,8 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'subscription_id' => 'string',
         'segment_id' => 'string',
-        'renewal_attempt_number' => 'float'
+        'renewal_attempt_number' => 'float',
+        'tracking_id' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPIFormats = [
         'subscription_id' => null,
         'segment_id' => null,
-        'renewal_attempt_number' => null
+        'renewal_attempt_number' => null,
+        'tracking_id' => null
     ];
 
     /**
@@ -83,7 +85,8 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static array $openAPINullables = [
         'subscription_id' => false,
 		'segment_id' => false,
-		'renewal_attempt_number' => false
+		'renewal_attempt_number' => false,
+		'tracking_id' => false
     ];
 
     /**
@@ -174,7 +177,8 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $attributeMap = [
         'subscription_id' => 'subscriptionId',
         'segment_id' => 'segmentId',
-        'renewal_attempt_number' => 'renewalAttemptNumber'
+        'renewal_attempt_number' => 'renewalAttemptNumber',
+        'tracking_id' => 'trackingId'
     ];
 
     /**
@@ -185,7 +189,8 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $setters = [
         'subscription_id' => 'setSubscriptionId',
         'segment_id' => 'setSegmentId',
-        'renewal_attempt_number' => 'setRenewalAttemptNumber'
+        'renewal_attempt_number' => 'setRenewalAttemptNumber',
+        'tracking_id' => 'setTrackingId'
     ];
 
     /**
@@ -196,7 +201,8 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $getters = [
         'subscription_id' => 'getSubscriptionId',
         'segment_id' => 'getSegmentId',
-        'renewal_attempt_number' => 'getRenewalAttemptNumber'
+        'renewal_attempt_number' => 'getRenewalAttemptNumber',
+        'tracking_id' => 'getTrackingId'
     ];
 
     /**
@@ -259,6 +265,7 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('subscription_id', $data ?? [], null);
         $this->setIfExists('segment_id', $data ?? [], null);
         $this->setIfExists('renewal_attempt_number', $data ?? [], null);
+        $this->setIfExists('tracking_id', $data ?? [], null);
     }
 
     /**
@@ -380,6 +387,33 @@ class BillingOptimization implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable renewal_attempt_number cannot be null');
         }
         $this->container['renewal_attempt_number'] = $renewal_attempt_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets tracking_id
+     *
+     * @return string|null
+     */
+    public function getTrackingId()
+    {
+        return $this->container['tracking_id'];
+    }
+
+    /**
+     * Sets tracking_id
+     *
+     * @param string|null $tracking_id The unique identifier of the tracking.
+     *
+     * @return self
+     */
+    public function setTrackingId($tracking_id)
+    {
+        if (is_null($tracking_id)) {
+            throw new \InvalidArgumentException('non-nullable tracking_id cannot be null');
+        }
+        $this->container['tracking_id'] = $tracking_id;
 
         return $this;
     }

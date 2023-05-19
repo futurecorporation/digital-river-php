@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **gift_card** | [**\DigitalRiver\ApiSdk\Model\GiftCard**](GiftCard.md) |  | [optional]
 **amazon_pay** | **object** |  | [optional]
 **after_pay** | **object** |  | [optional]
+**cc_avenue** | **object** |  | [optional]
 **flow** | **string** | The authentication flow of the source. | [optional]
 **state** | **string** | The status of the source, one of pending_funds, pending_redirect, requires_action, cancelled, chargeable, consumed or failed. You can only use chargeable sources to create a charge. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]

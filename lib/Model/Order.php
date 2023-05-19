@@ -87,6 +87,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelled_amount' => 'float',
         'captured_amount' => 'float',
         'items' => '\DigitalRiver\ApiSdk\Model\OrderItem[]',
+        'billing_optimization' => '\DigitalRiver\ApiSdk\Model\BillingOptimization',
         'invoice_pdfs' => '\DigitalRiver\ApiSdk\Model\File[]',
         'credit_memo_pdfs' => '\DigitalRiver\ApiSdk\Model\File[]',
         'request_to_be_forgotten' => 'bool',
@@ -145,6 +146,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelled_amount' => 'double',
         'captured_amount' => 'double',
         'items' => null,
+        'billing_optimization' => null,
         'invoice_pdfs' => null,
         'credit_memo_pdfs' => null,
         'request_to_be_forgotten' => null,
@@ -201,6 +203,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
 		'cancelled_amount' => false,
 		'captured_amount' => false,
 		'items' => false,
+		'billing_optimization' => false,
 		'invoice_pdfs' => true,
 		'credit_memo_pdfs' => true,
 		'request_to_be_forgotten' => false,
@@ -337,6 +340,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelled_amount' => 'cancelledAmount',
         'captured_amount' => 'capturedAmount',
         'items' => 'items',
+        'billing_optimization' => 'billingOptimization',
         'invoice_pdfs' => 'invoicePDFs',
         'credit_memo_pdfs' => 'creditMemoPDFs',
         'request_to_be_forgotten' => 'requestToBeForgotten',
@@ -393,6 +397,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelled_amount' => 'setCancelledAmount',
         'captured_amount' => 'setCapturedAmount',
         'items' => 'setItems',
+        'billing_optimization' => 'setBillingOptimization',
         'invoice_pdfs' => 'setInvoicePdfs',
         'credit_memo_pdfs' => 'setCreditMemoPdfs',
         'request_to_be_forgotten' => 'setRequestToBeForgotten',
@@ -449,6 +454,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'cancelled_amount' => 'getCancelledAmount',
         'captured_amount' => 'getCapturedAmount',
         'items' => 'getItems',
+        'billing_optimization' => 'getBillingOptimization',
         'invoice_pdfs' => 'getInvoicePdfs',
         'credit_memo_pdfs' => 'getCreditMemoPdfs',
         'request_to_be_forgotten' => 'getRequestToBeForgotten',
@@ -602,6 +608,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('cancelled_amount', $data ?? [], null);
         $this->setIfExists('captured_amount', $data ?? [], null);
         $this->setIfExists('items', $data ?? [], null);
+        $this->setIfExists('billing_optimization', $data ?? [], null);
         $this->setIfExists('invoice_pdfs', $data ?? [], null);
         $this->setIfExists('credit_memo_pdfs', $data ?? [], null);
         $this->setIfExists('request_to_be_forgotten', $data ?? [], false);
@@ -1506,6 +1513,33 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable items cannot be null');
         }
         $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_optimization
+     *
+     * @return \DigitalRiver\ApiSdk\Model\BillingOptimization|null
+     */
+    public function getBillingOptimization()
+    {
+        return $this->container['billing_optimization'];
+    }
+
+    /**
+     * Sets billing_optimization
+     *
+     * @param \DigitalRiver\ApiSdk\Model\BillingOptimization|null $billing_optimization billing_optimization
+     *
+     * @return self
+     */
+    public function setBillingOptimization($billing_optimization)
+    {
+        if (is_null($billing_optimization)) {
+            throw new \InvalidArgumentException('non-nullable billing_optimization cannot be null');
+        }
+        $this->container['billing_optimization'] = $billing_optimization;
 
         return $this;
     }

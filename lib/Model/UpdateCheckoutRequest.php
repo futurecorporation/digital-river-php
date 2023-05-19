@@ -76,6 +76,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'purchase_location' => '\DigitalRiver\ApiSdk\Model\PurchaseLocation',
         'shipping_choice' => '\DigitalRiver\ApiSdk\Model\ShippingRequest',
         'items' => '\DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]',
+        'billing_optimization' => '\DigitalRiver\ApiSdk\Model\BillingOptimization',
         'upstream_id' => 'string',
         'metadata' => 'array<string,mixed>'
     ];
@@ -107,6 +108,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'purchase_location' => null,
         'shipping_choice' => null,
         'items' => null,
+        'billing_optimization' => null,
         'upstream_id' => null,
         'metadata' => null
     ];
@@ -136,6 +138,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
 		'purchase_location' => false,
 		'shipping_choice' => true,
 		'items' => false,
+		'billing_optimization' => false,
 		'upstream_id' => false,
 		'metadata' => false
     ];
@@ -245,6 +248,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'purchase_location' => 'purchaseLocation',
         'shipping_choice' => 'shippingChoice',
         'items' => 'items',
+        'billing_optimization' => 'billingOptimization',
         'upstream_id' => 'upstreamId',
         'metadata' => 'metadata'
     ];
@@ -274,6 +278,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'purchase_location' => 'setPurchaseLocation',
         'shipping_choice' => 'setShippingChoice',
         'items' => 'setItems',
+        'billing_optimization' => 'setBillingOptimization',
         'upstream_id' => 'setUpstreamId',
         'metadata' => 'setMetadata'
     ];
@@ -303,6 +308,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         'purchase_location' => 'getPurchaseLocation',
         'shipping_choice' => 'getShippingChoice',
         'items' => 'getItems',
+        'billing_optimization' => 'getBillingOptimization',
         'upstream_id' => 'getUpstreamId',
         'metadata' => 'getMetadata'
     ];
@@ -383,6 +389,7 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('purchase_location', $data ?? [], null);
         $this->setIfExists('shipping_choice', $data ?? [], null);
         $this->setIfExists('items', $data ?? [], null);
+        $this->setIfExists('billing_optimization', $data ?? [], null);
         $this->setIfExists('upstream_id', $data ?? [], null);
         $this->setIfExists('metadata', $data ?? [], null);
     }
@@ -945,6 +952,33 @@ class UpdateCheckoutRequest implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable items cannot be null');
         }
         $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_optimization
+     *
+     * @return \DigitalRiver\ApiSdk\Model\BillingOptimization|null
+     */
+    public function getBillingOptimization()
+    {
+        return $this->container['billing_optimization'];
+    }
+
+    /**
+     * Sets billing_optimization
+     *
+     * @param \DigitalRiver\ApiSdk\Model\BillingOptimization|null $billing_optimization billing_optimization
+     *
+     * @return self
+     */
+    public function setBillingOptimization($billing_optimization)
+    {
+        if (is_null($billing_optimization)) {
+            throw new \InvalidArgumentException('non-nullable billing_optimization cannot be null');
+        }
+        $this->container['billing_optimization'] = $billing_optimization;
 
         return $this;
     }
