@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 **billing_optimization** | [**\DigitalRiver\ApiSdk\Model\BillingOptimization**](BillingOptimization.md) |  | [optional]
 **shipping_choice** | [**\DigitalRiver\ApiSdk\Model\ShippingChoice**](ShippingChoice.md) |  | [optional]
 **payment** | [**\DigitalRiver\ApiSdk\Model\Payments**](Payments.md) |  | [optional]
-**disclosures** | [**\DigitalRiver\ApiSdk\Model\Disclosures**](Disclosures.md) |  | [optional]
+**disclosures** | [**\DigitalRiver\ApiSdk\Model\DisclosureDetails[]**](DisclosureDetails.md) |  | [optional]
 **live_mode** | **bool** | Has the value &lt;code&gt;true&lt;/code&gt; if the object exists in live mode or the value &lt;code&gt;false&lt;/code&gt; if the object exists in test mode. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 **upstream_id** | **string** | The upstream identifier. | [optional]

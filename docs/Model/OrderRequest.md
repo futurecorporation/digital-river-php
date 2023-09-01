@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **customer_type** | [**\DigitalRiver\ApiSdk\Model\CustomerType**](CustomerType.md) |  | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 **purchase_location** | [**\DigitalRiver\ApiSdk\Model\PurchaseLocation**](PurchaseLocation.md) |  | [optional]
-**disclosures** | [**\DigitalRiver\ApiSdk\Model\Disclosures**](Disclosures.md) |  | [optional]
+**disclosures** | [**\DigitalRiver\ApiSdk\Model\DisclosureDetails[]**](DisclosureDetails.md) |  | [optional]
 **upstream_id** | **string** | The upstream identifier. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

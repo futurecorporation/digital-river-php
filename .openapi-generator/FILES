@@ -73,7 +73,6 @@ docs/Model/DirectDebit.md
 docs/Model/DirectDebitRedirect.md
 docs/Model/Disclosure.md
 docs/Model/DisclosureDetails.md
-docs/Model/Disclosures.md
 docs/Model/Discount.md
 docs/Model/DropInCheckoutLink.md
 docs/Model/DropInCheckoutLinkResponse.md
@@ -385,7 +384,6 @@ lib/Model/DirectDebit.php
 lib/Model/DirectDebitRedirect.php
 lib/Model/Disclosure.php
 lib/Model/DisclosureDetails.php
-lib/Model/Disclosures.php
 lib/Model/Discount.php
 lib/Model/DropInCheckoutLink.php
 lib/Model/DropInCheckoutLinkResponse.php

@@ -4,7 +4,7 @@
     "title": "Digital River API Reference",
     "description": "removed by liao, too long",
     "version": "2023",
-    "x-generate-timestamp": "2023-04-25T18:55:34.766154Z",
+    "x-generate-timestamp": "2023-07-12T15:24:30.805061Z",
     "x-logo": {
       "url": "https://www.digitalriver.com/wp-content/uploads/sites/8/Digital-River-Logo_160x70.png",
       "backgroundColor": "#FFFFFF",
@@ -4362,7 +4362,7 @@
         },
         "security": [
           {
-            "basicAuth": []
+            "bearerAuth": []
           }
         ]
       }
@@ -4523,7 +4523,7 @@
         },
         "security": [
           {
-            "basicAuth": []
+            "bearerAuth": []
           }
         ]
       }
@@ -24188,7 +24188,7 @@
           "locale": {
             "type": "string",
             "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
-            "example": "en_US"
+            "example": "en_IE"
           },
           "browserIp": {
             "type": "string",
@@ -24312,7 +24312,10 @@
             "$ref": "#/components/schemas/Payments"
           },
           "disclosures": {
-            "$ref": "#/components/schemas/Disclosures"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisclosureDetails"
+            }
           },
           "liveMode": {
             "type": "boolean",
@@ -25583,7 +25586,7 @@
           "locale": {
             "type": "string",
             "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
-            "example": "en_US"
+            "example": "en_IE"
           },
           "invoiceAttributeId": {
             "type": "string",
@@ -25648,6 +25651,12 @@
             "type": "string",
             "description": "The upstream identifier.",
             "example": "7765374748"
+          },
+          "disclosures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisclosureDetails"
+            }
           },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
@@ -26607,7 +26616,7 @@
           },
           "language": {
             "type": "string",
-            "description": "Language to be used by library.",
+            "description": "The assigned language.",
             "example": "en",
             "enum": [
               "ar",
@@ -26615,14 +26624,14 @@
               "da",
               "de",
               "el",
-              "en-gb",
               "en",
               "en-us",
+              "en-gb",
               "es",
               "es-419",
               "fi",
-              "fr-ca",
               "fr",
+              "fr-ca",
               "hu",
               "it",
               "ja",
@@ -26630,8 +26639,8 @@
               "nl",
               "no",
               "pl",
-              "pt-br",
               "pt",
+              "pt-br",
               "ru",
               "sk",
               "sv",
@@ -26699,7 +26708,10 @@
             }
           },
           "disclosures": {
-            "$ref": "#/components/schemas/Disclosures"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisclosureDetails"
+            }
           },
           "style": {
             "type": "object",
@@ -27938,18 +27950,6 @@
             "type": "string",
             "description": "The tax identifier.",
             "example": "DE123456789"
-          }
-        }
-      },
-      "Disclosures": {
-        "title": "Disclosures",
-        "type": "object",
-        "properties": {
-          "disclosures": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DisclosureDetails"
-            }
           }
         }
       },
@@ -29737,6 +29737,11 @@
             "items": {
               "$ref": "#/components/schemas/SubscriptionItems"
             }
+          },
+          "currentPeriodStartDate": {
+            "type": "string",
+            "description": "Represents the date and time when the subscription's current billing period began.",
+            "format": "date-time"
           },
           "currentPeriodEndDate": {
             "type": "string",
@@ -31655,7 +31660,10 @@
             "example": "7765374748"
           },
           "disclosures": {
-            "$ref": "#/components/schemas/Disclosures"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisclosureDetails"
+            }
           }
         }
       },
@@ -31698,7 +31706,7 @@
         "title": "Locale",
         "type": "string",
         "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
-        "example": "en-US"
+        "example": "en_IE"
       },
       "IntegrationAddress": {
         "title": "IntegrationAddress",
@@ -31976,7 +31984,44 @@
           "locale": {
             "type": "string",
             "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
-            "example": "en_US"
+            "example": "en_IE"
+          },
+          "language": {
+            "type": "string",
+            "description": "The assigned language.",
+            "example": "en",
+            "enum": [
+              "ar",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-us",
+              "en-gb",
+              "es",
+              "es-419",
+              "fi",
+              "fr",
+              "fr-ca",
+              "hu",
+              "it",
+              "ja",
+              "ko",
+              "nl",
+              "no",
+              "pl",
+              "pt",
+              "pt-br",
+              "ru",
+              "sk",
+              "sv",
+              "th",
+              "tr",
+              "zh",
+              "zh-hk",
+              "zh-tw"
+            ]
           },
           "customerType": {
             "$ref": "#/components/schemas/CustomerType"
@@ -31985,7 +32030,10 @@
             "$ref": "#/components/schemas/ChargeType"
           },
           "disclosures": {
-            "$ref": "#/components/schemas/Disclosures"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisclosureDetails"
+            }
           },
           "style": {
             "type": "object",
@@ -32331,7 +32379,7 @@
           "locale": {
             "type": "string",
             "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
-            "example": "en_US"
+            "example": "en_IE"
           },
           "browserIp": {
             "type": "string",
@@ -32530,7 +32578,7 @@
             "$ref": "#/components/schemas/Payments"
           },
           "disclosures": {
-            "$ref": "#/components/schemas/Disclosures"
+            "$ref": "#/components/schemas/DisclosureDetails"
           },
           "liveMode": {
             "type": "boolean",
@@ -32701,7 +32749,10 @@
             "$ref": "#/components/schemas/PurchaseLocation"
           },
           "disclosures": {
-            "$ref": "#/components/schemas/Disclosures"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisclosureDetails"
+            }
           },
           "upstreamId": {
             "type": "string",

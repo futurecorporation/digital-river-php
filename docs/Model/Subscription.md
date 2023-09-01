@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **locale** | **string** | A locale designator that combines a two-letter ISO 639-1 language code with a ISO 3166-1 alpha-2 country code. | [optional]
 **state** | **string** | The state of the subscription | [optional]
 **items** | [**\DigitalRiver\ApiSdk\Model\SubscriptionItems[]**](SubscriptionItems.md) |  | [optional]
+**current_period_start_date** | **\DateTime** | Represents the date and time when the subscription&#39;s current billing period began. | [optional]
 **current_period_end_date** | **\DateTime** | Represents the date and time when the subscription&#39;s current billing period ends. | [optional]
 **next_invoice_date** | **\DateTime** | Represents the date and time when Digital River next opens an invoice and starts the billing process. | [optional]
 **next_reminder_date** | **\DateTime** | Date when the next reminder event will be sent. | [optional]

@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **items** | [**\DigitalRiver\ApiSdk\Model\SkuUpdateRequestItem[]**](SkuUpdateRequestItem.md) | fixed by liao | [optional]
 **billing_optimization** | [**\DigitalRiver\ApiSdk\Model\BillingOptimization**](BillingOptimization.md) |  | [optional]
 **upstream_id** | **string** | The upstream identifier. | [optional]
+**disclosures** | [**\DigitalRiver\ApiSdk\Model\DisclosureDetails[]**](DisclosureDetails.md) |  | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

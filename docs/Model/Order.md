@@ -45,7 +45,7 @@ Name | Type | Description | Notes
 **fraud_state_transitions** | [**\DigitalRiver\ApiSdk\Model\FraudStateTransitions**](FraudStateTransitions.md) |  | [optional]
 **cancel_reason** | **string** | Indicates the reason for the cancellation. | [optional]
 **payment** | [**\DigitalRiver\ApiSdk\Model\Payments**](Payments.md) |  | [optional]
-**disclosures** | [**\DigitalRiver\ApiSdk\Model\Disclosures**](Disclosures.md) |  | [optional]
+**disclosures** | [**\DigitalRiver\ApiSdk\Model\DisclosureDetails**](DisclosureDetails.md) |  | [optional]
 **live_mode** | **bool** | Has the value &lt;code&gt;true&lt;/code&gt; if the object exists in live mode or the value &lt;code&gt;false&lt;/code&gt; if the object exists in test mode. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 **selling_entity** | [**\DigitalRiver\ApiSdk\Model\SellingEntity**](SellingEntity.md) |  | [optional]
