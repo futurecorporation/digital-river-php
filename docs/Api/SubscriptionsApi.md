@@ -7,7 +7,7 @@ All URIs are relative to https://api.digitalriver.com, except if the operation d
 | [**deleteSubscriptions()**](SubscriptionsApi.md#deleteSubscriptions) | **DELETE** /subscriptions/{id} | Deletes a Subscription by ID |
 | [**listSubscriptions()**](SubscriptionsApi.md#listSubscriptions) | **GET** /subscriptions | Returns a list of Subscriptions |
 | [**retrieveSubscriptions()**](SubscriptionsApi.md#retrieveSubscriptions) | **GET** /subscriptions/{id} | Gets a Subscription by ID |
-| [**updateSubscriptions()**](SubscriptionsApi.md#updateSubscriptions) | **POST** /subscriptions/{id} | Updates a Subscription |
+| [**updateSubscriptions()**](SubscriptionsApi.md#updateSubscriptions) | **POST** /subscriptions/{id} | Updates the Subscription |
 
 
 ## `deleteSubscriptions()`
@@ -205,9 +205,9 @@ try {
 updateSubscriptions($id, $update_subscription_request): \DigitalRiver\ApiSdk\Model\Subscription
 ```
 
-Updates a Subscription
+Updates the Subscription
 
-Updates the specified Subscription.
+Updates the specified Subscription
 
 ### Example
 

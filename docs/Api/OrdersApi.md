@@ -6,6 +6,7 @@ All URIs are relative to https://api.digitalriver.com, except if the operation d
 | ------------- | ------------- | ------------- |
 | [**createOrders()**](OrdersApi.md#createOrders) | **POST** /orders | Creates a new order. |
 | [**listOrders()**](OrdersApi.md#listOrders) | **GET** /orders | Returns a list of orders. |
+| [**refreshOrder()**](OrdersApi.md#refreshOrder) | **POST** /orders/{id}/refresh | Refreshes an existing order. |
 | [**retrieveOrderTracking()**](OrdersApi.md#retrieveOrderTracking) | **GET** /orders/{id}/tracking | Tracks Global Logistics shipments. |
 | [**retrieveOrders()**](OrdersApi.md#retrieveOrders) | **GET** /orders/{id} | Gets an order by ID. |
 | [**updateOrders()**](OrdersApi.md#updateOrders) | **POST** /orders/{id} | Updates an existing order. |
@@ -181,6 +182,66 @@ try {
 ### Return type
 
 [**\DigitalRiver\ApiSdk\Model\ListOrdersResponse**](../Model/ListOrdersResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `refreshOrder()`
+
+```php
+refreshOrder($id): \DigitalRiver\ApiSdk\Model\Order
+```
+
+Refreshes an existing order.
+
+Refreshes an order so <code>payment.session.state</code>and/or <code>state</code> can be checked.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DigitalRiver\ApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DigitalRiver\ApiSdk\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | Order ID
+
+try {
+    $result = $apiInstance->refreshOrder($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->refreshOrder: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Order ID | |
+
+### Return type
+
+[**\DigitalRiver\ApiSdk\Model\Order**](../Model/Order.md)
 
 ### Authorization
 

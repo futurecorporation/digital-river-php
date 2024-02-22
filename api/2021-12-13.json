@@ -3,8 +3,8 @@
   "info": {
     "title": "Digital River API Reference",
     "description": "removed by liao, too long",
-    "version": "2023",
-    "x-generate-timestamp": "2023-07-12T15:24:30.805061Z",
+    "version": "2024",
+    "x-generate-timestamp": "2024-01-30T18:42:51.421623Z",
     "x-logo": {
       "url": "https://www.digitalriver.com/wp-content/uploads/sites/8/Digital-River-Logo_160x70.png",
       "backgroundColor": "#FFFFFF",
@@ -157,7 +157,7 @@
     },
     {
       "name": "Checkouts",
-      "description": "[Checkouts](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts) handle an end customers' checkout flow. You can create, retrieve, update and delete individual checkouts, as well as list all checkouts. \n<br><br>Version:master"
+      "description": "[Checkouts](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts) handle an end customers' checkout flow. You can create, retrieve, update and delete individual checkouts, as well as query all checkouts. \n<br><br>Version:master"
     },
     {
       "name": "Country specifications",
@@ -273,7 +273,7 @@
     },
     {
       "name": "Subscriptions",
-      "description": "A [Subscription](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/subscriptions/digital-river-coordinated-subscriptions#the-subscriptions-object) defines the details of the recurring subscription order.<br><br>Version:master"
+      "description": "A Subscription defines the details of the recurring subscription order.<br><br>Version:master"
     },
     {
       "name": "Tax identifiers",
@@ -9357,6 +9357,181 @@
             "bearerAuth": []
           }
         ]
+      },
+      "post": {
+        "tags": ["Fulfillments"],
+        "summary": "Updates an existing fulfillment",
+        "description": "Updates an existing fulfillment.",
+        "operationId": "updateFulfillments",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Fulfillment ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFulfillmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fulfillment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401 Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "401 Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "405 Method Not Allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "406 Not Acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "408": {
+            "description": "408 Request Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "409 Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429 Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "502 Bad Gateway Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "503 Service Unavailable Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "504 Gateway Timeout Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
       }
     },
     "/fulfillments": {
@@ -14080,6 +14255,164 @@
           },
           "409": {
             "description": "409 Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429 Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "502 Bad Gateway Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "503 Service Unavailable Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "504 Gateway Timeout Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/orders/{id}/refresh": {
+      "post": {
+        "tags": ["Orders"],
+        "summary": "Refreshes an existing order.",
+        "description": "Refreshes an order so <code>payment.session.state</code>and/or <code>state</code> can be checked.",
+        "operationId": "refreshOrder",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Order ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401 Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "404 Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "405 Method Not Allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "406 Not Acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "408": {
+            "description": "408 Request Timeout",
             "content": {
               "application/json": {
                 "schema": {
@@ -21725,8 +22058,8 @@
       },
       "post": {
         "tags": ["Subscriptions"],
-        "summary": "Updates a Subscription",
-        "description": "Updates the specified Subscription.",
+        "summary": "Updates the Subscription",
+        "description": "Updates the specified Subscription",
         "operationId": "updateSubscriptions",
         "parameters": [
           {
@@ -23984,6 +24317,11 @@
               "$ref": "#/components/schemas/FulfillmentRequestItem"
             }
           },
+          "currency": {
+            "type": "string",
+            "description": "A three-letter ISO currency code.",
+            "example": "USD"
+          },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
           },
@@ -24001,6 +24339,11 @@
             "type": "string",
             "description": "The URL of the tracking page for the fulfillment.",
             "example": "http://www.digitalriver.com?code=5678901234"
+          },
+          "partnerId": {
+            "type": "string",
+            "description": "The unique identifier of the partner associated with the sku.",
+            "example": "partner123"
           }
         }
       },
@@ -24151,7 +24494,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "The unique identifier for the checkout",
+            "description": "The checkout's unique identifier",
             "readOnly": true,
             "example": "5823594809"
           },
@@ -24184,6 +24527,43 @@
             "description": "The customer's email address.",
             "format": "email",
             "example": "jsmith@digitalriver.com"
+          },
+          "language": {
+            "type": "string",
+            "description": "The language assigned to the checkout.",
+            "example": "en",
+            "enum": [
+              "ar",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-us",
+              "en-gb",
+              "es",
+              "es-419",
+              "fi",
+              "fr",
+              "fr-ca",
+              "hu",
+              "it",
+              "ja",
+              "ko",
+              "nl",
+              "false",
+              "pl",
+              "pt",
+              "pt-br",
+              "ru",
+              "sk",
+              "sv",
+              "th",
+              "tr",
+              "zh",
+              "zh-hk",
+              "zh-tw"
+            ]
           },
           "locale": {
             "type": "string",
@@ -24292,6 +24672,9 @@
           },
           "customerType": {
             "$ref": "#/components/schemas/CustomerType"
+          },
+          "chargeType": {
+            "$ref": "#/components/schemas/ChargeType"
           },
           "sellingEntity": {
             "$ref": "#/components/schemas/SellingEntity"
@@ -24607,6 +24990,11 @@
               "$ref": "#/components/schemas/FulfillmentResponseItem"
             }
           },
+          "currency": {
+            "type": "string",
+            "description": "A three-letter ISO currency code.",
+            "example": "USD"
+          },
           "liveMode": {
             "type": "boolean",
             "description": "Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.",
@@ -24766,7 +25154,6 @@
       },
       "InvoiceItemRequest": {
         "title": "InvoiceItemRequest",
-        "required": ["skuId"],
         "type": "object",
         "properties": {
           "skuId": {
@@ -25300,6 +25687,11 @@
               "$ref": "#/components/schemas/Charges"
             }
           },
+          "source": {
+            "type": "string",
+            "description": "The source of the refund.",
+            "example": "string"
+          },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
           }
@@ -25583,6 +25975,45 @@
             "format": "email",
             "example": "jsmith@digitalriver.com"
           },
+          "language": {
+            "type": "string",
+            "description": "The assigned language.",
+            "example": "en",
+            "enum": [
+              "ar",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-us",
+              "en-gb",
+              "es",
+              "es-419",
+              "fi",
+              "fr",
+              "fr-ca",
+              "he",
+              "hu",
+              "it",
+              "ja",
+              "ko",
+              "nl",
+              "false",
+              "pl",
+              "pt",
+              "pt-br",
+              "ru",
+              "sk",
+              "sl",
+              "sv",
+              "th",
+              "tr",
+              "zh",
+              "zh-hk",
+              "zh-tw"
+            ]
+          },
           "locale": {
             "type": "string",
             "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
@@ -25638,7 +26069,6 @@
             "$ref": "#/components/schemas/ShippingRequest"
           },
           "items": {
-            "description": "fixed by liao",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SkuUpdateRequestItem"
@@ -25666,6 +26096,33 @@
       "Payco": {
         "title": "Payco",
         "type": "object"
+      },
+      "UpdateFulfillmentRequestItem": {
+        "title": "UpdateFulfillmentRequestItem",
+        "required": ["itemId"],
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "description": "The unique identifier of the line item",
+            "example": "98784590336"
+          },
+          "trackingCompany": {
+            "type": "string",
+            "description": "The name of the tracking company",
+            "example": "Fedex"
+          },
+          "trackingNumber": {
+            "type": "string",
+            "description": "A tracking number provided by the shipping company",
+            "example": "5678901234"
+          },
+          "trackingUrl": {
+            "type": "string",
+            "description": "The URL of the tracking page for the fulfillment",
+            "example": "http://www.digitalriver.com?code=5678901234"
+          }
+        }
       },
       "OrderStateTransitions": {
         "title": "OrderStateTransitions",
@@ -25894,6 +26351,11 @@
         "title": "ShippingMethodQuote",
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the shipping method",
+            "example": "65"
+          },
           "description": {
             "type": "string",
             "description": "Shipping method description",
@@ -25908,6 +26370,10 @@
             "description": "The terms of shipping.",
             "example": "DDP",
             "enum": ["DDP", "DAP"]
+          },
+          "estimatedDelivery": {
+            "type": "string",
+            "example": "3-5 days"
           },
           "amount": {
             "type": "number",
@@ -26401,10 +26867,10 @@
             "$ref": "#/components/schemas/SkuId"
           },
           "productDetails": {
-            "$ref": "#/components/schemas/ProductDetails"
+            "$ref": "#/components/schemas/SessionProductDetails"
           },
           "subscriptionInfo": {
-            "$ref": "#/components/schemas/SubscriptionInfo"
+            "$ref": "#/components/schemas/CheckoutSessionSubscriptionInfo"
           },
           "price": {
             "type": "number",
@@ -26415,6 +26881,12 @@
           "aggregatePrice": {
             "type": "number",
             "description": "The aggregate price of an item.",
+            "format": "double",
+            "example": 9.99
+          },
+          "strikeThroughPrice": {
+            "type": "number",
+            "description": "The striked through (i.e., crossed out) price of an item.",
             "format": "double",
             "example": 9.99
           },
@@ -27826,6 +28298,69 @@
           }
         }
       },
+      "SessionProductDetails": {
+        "title": "SessionProductDetails",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the product in the upstream system.",
+            "example": "100067660336"
+          },
+          "skuGroupId": {
+            "type": "string",
+            "description": "The identifier of the SKU group.",
+            "example": "wireless-keyboards"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the product.",
+            "example": "Keyboard"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the product.",
+            "example": "Top rated keyboard"
+          },
+          "categories": {
+            "type": "string",
+            "description": "The full path to the category where item is included. Categories should be separated by “ > “.",
+            "example": "Sports & Outdoors > Exercise & Fitness > Wearable Technology > Fitness Trackers"
+          },
+          "url": {
+            "type": "string",
+            "description": "The product url.",
+            "example": "https://producturl.com"
+          },
+          "countryOfOrigin": {
+            "type": "string",
+            "description": "The country of origin of the product.",
+            "example": "US"
+          },
+          "image": {
+            "type": "string",
+            "description": "The image of the product.",
+            "example": "https://imageurl.com"
+          },
+          "weight": {
+            "type": "number",
+            "description": "The weight of the product measured in the unit specified by weightUnit.",
+            "format": "double",
+            "example": 20.5
+          },
+          "weightUnit": {
+            "type": "string",
+            "description": "The unit of measurement applied to the weight.",
+            "example": "oz",
+            "enum": ["oz", "lb", "g", "kg"]
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "The manufacturer's part number.",
+            "example": "SWG1224J10L"
+          }
+        }
+      },
       "Individual": {
         "title": "Individual",
         "type": "object",
@@ -28561,6 +29096,11 @@
         "title": "ShippingChoice",
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the shipment.",
+            "example": "100067660336"
+          },
           "amount": {
             "type": "number",
             "description": "The shipping amount.",
@@ -28674,6 +29214,38 @@
             "description": "The number of items cancelled. You must provide either this value and/or a value for the <code>quantity</code> attribute.",
             "nullable": true,
             "example": 1
+          },
+          "trackingCompany": {
+            "type": "string",
+            "description": "The name of the tracking company",
+            "example": "Fedex"
+          },
+          "trackingNumber": {
+            "type": "string",
+            "description": "A tracking number provided by the shipping company",
+            "example": "5678901234"
+          },
+          "trackingUrl": {
+            "type": "string",
+            "description": "The URL of the tracking page for the fulfillment",
+            "example": "http://www.digitalriver.com?code=5678901234"
+          },
+          "subfulfillerId": {
+            "type": "string",
+            "description": "The unique identifer of the subfulfiller.",
+            "example": "hjueo9g"
+          },
+          "distributorCost": {
+            "type": "number",
+            "description": "The distributor's cost. If provided, then <code>currency</code> is required.",
+            "format": "double",
+            "example": 10.0
+          },
+          "shippingCost": {
+            "type": "number",
+            "description": "The cost of shipping. If provided, then <code>currency</code> is required.",
+            "format": "double",
+            "example": 10.0
           }
         }
       },
@@ -28719,6 +29291,11 @@
         "title": "DropInShippingQuote",
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the shipping method",
+            "example": "65"
+          },
           "description": {
             "type": "string",
             "description": "Shipping method description",
@@ -28733,6 +29310,11 @@
             "description": "The terms of shipping.",
             "example": "DDP",
             "enum": ["DDP", "DAP"]
+          },
+          "estimatedDelivery": {
+            "type": "string",
+            "description": "The estimated time required to deliver the goods",
+            "example": "3-5 days"
           },
           "amount": {
             "type": "number",
@@ -29239,7 +29821,6 @@
             "enum": ["draft", "open", "void", "paid", "uncollectible"]
           },
           "stateTransitions": {
-            "description": "fixed by liao",
             "$ref": "#/components/schemas/InvoiceStateTransitions"
           },
           "payment": {
@@ -29695,7 +30276,8 @@
               "activeFree",
               "failed",
               "cancelled",
-              "ended"
+              "ended",
+              "lapsed"
             ]
           },
           "items": {
@@ -30756,7 +31338,7 @@
           },
           "sessionUpstreamId": {
             "type": "string",
-            "description": "The upstream identifier of the checkout session associated with the shipping quotes request.",
+            "description": "The <code>upstreamId</code> of the checkout-session associated with the shipping quotes request.",
             "example": "8234373746"
           },
           "currency": {
@@ -30919,6 +31501,11 @@
             "type": "string",
             "description": "The description of the product.",
             "example": "Top rated keyboard"
+          },
+          "itemBreadcrumb": {
+            "type": "string",
+            "description": "The full path to the category where item is included. Categories should be separated by “ > “.",
+            "example": "Sports & Outdoors > Exercise & Fitness > Wearable Technology > Fitness Trackers"
           },
           "url": {
             "type": "string",
@@ -31307,6 +31894,71 @@
           }
         }
       },
+      "CheckoutSessionSubscriptionInfo": {
+        "title": "CheckoutSessionSubscriptionInfo",
+        "type": "object",
+        "properties": {
+          "freeTrial": {
+            "type": "boolean",
+            "description": "If <code>true</code>, indicates that this is a free trial.",
+            "example": true
+          },
+          "autoRenewal": {
+            "type": "boolean",
+            "description": "If <code>true</code>, indicates that renewals for this subscription are automatic rather than manual.",
+            "example": true
+          },
+          "terms": {
+            "type": "string",
+            "description": "For auto renewal subscriptions, the terms displayed to the customer at acquisition.",
+            "example": "Please accept these terms."
+          },
+          "planId": {
+            "type": "string",
+            "description": "The unique identifier of the plan",
+            "example": "654321"
+          },
+          "plan": {
+            "type": "object",
+            "properties": {
+              "interval": {
+                "type": "string",
+                "description": "The supported billing intervals",
+                "example": "month",
+                "enum": ["year", "month", "week", "day"]
+              },
+              "intervalCount": {
+                "type": "integer",
+                "description": "How often the customer is billed per the unit of time specified by <code>interval</code> (e.g. every 3 months).",
+                "example": 1
+              }
+            }
+          },
+          "subscriptionId": {
+            "type": "string",
+            "description": "The subscription identifier.",
+            "example": "665430999"
+          },
+          "billingAgreementId": {
+            "type": "string",
+            "description": "The Digital River billing agreement identifier.",
+            "example": "cfeba2ac-d532-49e4-99f4-7a433507facf"
+          },
+          "startTime": {
+            "type": "string",
+            "description": "The start date and time of the subscription.",
+            "format": "date-time",
+            "example": "2020-05-21T00:00:00Z"
+          },
+          "endTime": {
+            "type": "string",
+            "description": "The <code>startTime</code> plus the subscription duration.",
+            "format": "date-time",
+            "example": "2021-05-20T11:59:59Z"
+          }
+        },
+        "description": "The subscription information of the item."
+      },
       "GlobalFulfillmentReturnItemResponse": {
         "title": "GlobalFulfillmentReturnItemResponse",
         "type": "object",
@@ -31356,6 +32008,47 @@
             "items": {
               "$ref": "#/components/schemas/UnitAttributes"
             }
+          }
+        }
+      },
+      "UpdateFulfillmentRequest": {
+        "title": "UpdateFulfillmentRequest",
+        "type": "object",
+        "properties": {
+          "trackingCompany": {
+            "type": "string",
+            "description": "The name of the tracking company",
+            "example": "Fedex"
+          },
+          "trackingNumber": {
+            "type": "string",
+            "description": "A tracking number provided by the shipping company",
+            "example": "5678901234"
+          },
+          "trackingUrl": {
+            "type": "string",
+            "description": "The URL of the tracking page for the fulfillment",
+            "example": "http://www.digitalriver.com?code=5678901234"
+          },
+          "items": {
+            "type": "array",
+            "description": "An array of items to fulfill and/or cancel",
+            "items": {
+              "$ref": "#/components/schemas/UpdateFulfillmentRequestItem"
+            }
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StringMetadata"
+              },
+              {
+                "$ref": "#/components/schemas/NumberMetadata"
+              },
+              {
+                "$ref": "#/components/schemas/BooleanMetadata"
+              }
+            ]
           }
         }
       },
@@ -31527,6 +32220,43 @@
             "format": "email",
             "example": "jsmith@digitalriver.com"
           },
+          "language": {
+            "type": "string",
+            "description": "The assigned language.",
+            "example": "en",
+            "enum": [
+              "ar",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-us",
+              "en-gb",
+              "es",
+              "es-419",
+              "fi",
+              "fr",
+              "fr-ca",
+              "hu",
+              "it",
+              "ja",
+              "ko",
+              "nl",
+              "false",
+              "pl",
+              "pt",
+              "pt-br",
+              "ru",
+              "sk",
+              "sv",
+              "th",
+              "tr",
+              "zh",
+              "zh-hk",
+              "zh-tw"
+            ]
+          },
           "locale": {
             "$ref": "#/components/schemas/Locale"
           },
@@ -31665,6 +32395,38 @@
             "description": "The number of items cancelled.",
             "readOnly": true,
             "example": 1
+          },
+          "trackingCompany": {
+            "type": "string",
+            "description": "The name of the tracking company",
+            "example": "Fedex"
+          },
+          "trackingNumber": {
+            "type": "string",
+            "description": "A tracking number provided by the shipping company",
+            "example": "5678901234"
+          },
+          "trackingUrl": {
+            "type": "string",
+            "description": "The URL of the tracking page for the fulfillment",
+            "example": "http://www.digitalriver.com?code=5678901234"
+          },
+          "subfulfillerId": {
+            "type": "string",
+            "description": "The unique identifer of the subfulfiller.",
+            "example": "hjueo9g"
+          },
+          "distributorCost": {
+            "type": "number",
+            "description": "The distributor's cost.",
+            "format": "double",
+            "example": 10.0
+          },
+          "shippingCost": {
+            "type": "number",
+            "description": "The cost of shipping.",
+            "format": "double",
+            "example": 10.0
           }
         }
       },
@@ -31822,6 +32584,11 @@
         "title": "ShippingRequest",
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the shipment.",
+            "example": "100067660336"
+          },
           "amount": {
             "type": "number",
             "description": "The shipping amount.",
@@ -32342,6 +33109,43 @@
             "format": "email",
             "example": "jsmith@digitalriver.com"
           },
+          "language": {
+            "type": "string",
+            "description": "The assigned language.",
+            "example": "en",
+            "enum": [
+              "ar",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-us",
+              "en-gb",
+              "es",
+              "es-419",
+              "fi",
+              "fr",
+              "fr-ca",
+              "hu",
+              "it",
+              "ja",
+              "ko",
+              "nl",
+              "false",
+              "pl",
+              "pt",
+              "pt-br",
+              "ru",
+              "sk",
+              "sv",
+              "th",
+              "tr",
+              "zh",
+              "zh-hk",
+              "zh-tw"
+            ]
+          },
           "locale": {
             "type": "string",
             "description": "A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code.",
@@ -32562,6 +33366,9 @@
           "customerType": {
             "$ref": "#/components/schemas/CustomerType"
           },
+          "chargeType": {
+            "$ref": "#/components/schemas/ChargeType"
+          },
           "upstreamId": {
             "type": "string",
             "description": "The upstream identifier.",
@@ -32620,6 +33427,43 @@
             "description": "The customer's email address.",
             "format": "email",
             "example": "jsmith@digitalriver.com"
+          },
+          "language": {
+            "type": "string",
+            "description": "The assigned language.",
+            "example": "en",
+            "enum": [
+              "ar",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-us",
+              "en-gb",
+              "es",
+              "es-419",
+              "fi",
+              "fr",
+              "fr-ca",
+              "hu",
+              "it",
+              "ja",
+              "ko",
+              "nl",
+              "false",
+              "pl",
+              "pt",
+              "pt-br",
+              "ru",
+              "sk",
+              "sv",
+              "th",
+              "tr",
+              "zh",
+              "zh-hk",
+              "zh-tw"
+            ]
           },
           "locale": {
             "$ref": "#/components/schemas/Locale"
@@ -32941,6 +33785,12 @@
             "example": "2018-04-25T20:36:00Z"
           },
           "ended": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2018-04-25T20:36:00Z"
+          },
+          "lapsed": {
             "type": "string",
             "format": "date-time",
             "nullable": true,
@@ -33561,7 +34411,7 @@
           },
           "orderUpstreamId": {
             "type": "string",
-            "description": "Unique upstream ID for the order. Fixed by Liao",
+            "description": "Unique upstream ID for the order.",
             "example": "fe18c37b-f76b-4eaa-892a-b1aca88cf46d"
           },
           "skuTaxCode": {
@@ -33993,7 +34843,6 @@
         }
       },
       "InvoiceStateTransitions": {
-        "description": "fixed by liao, modified from OrderStateTransitions",
         "title": "InvoiceStateTransitions",
         "type": "object",
         "properties": {
@@ -34007,11 +34856,6 @@
             "format": "date-time",
             "nullable": true
           },
-          "void": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
           "paid": {
             "type": "string",
             "format": "date-time",
@@ -34021,10 +34865,14 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
+          },
+          "void": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
-        "nullable": true,
-        "readOnly": true
+        "description": "The timestamps at the which the invoice state was updated"
       },
       "ShippingQuoteResponse": {
         "title": "ShippingQuoteResponse",
@@ -34172,6 +35020,65 @@
               "failed",
               "requires_action"
             ]
+          },
+          "nextAction": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string",
+                "description": "The specific action that must be taken.",
+                "readOnly": true,
+                "example": "redirect",
+                "enum": [
+                  "redirect",
+                  "show_payment_instructions",
+                  "sca_required"
+                ]
+              },
+              "data": {
+                "type": "object",
+                "properties": {
+                  "redirectUrl": {
+                    "type": "string",
+                    "description": "If <code>action</code> is <code>redirect</code> then redirect to this resource.",
+                    "readOnly": true,
+                    "example": "https://api.digitalriver.com:443/payments/redirects/3fab742c-a7e8-4a90-8951-86d071fa070d?apiKey=pk_test_a45b91ba4f984df7a229b2ab5941ce1c"
+                  },
+                  "sourceId": {
+                    "type": "string",
+                    "description": "The identifier of the payment source. If <code>action</code> is <code>show_payment_instructions</code>, then use this identifier to configure the delayed payment instructions element.",
+                    "readOnly": true,
+                    "example": "9c00d78c-dbad-4303-b366-7e0a49c322e7"
+                  },
+                  "sourceClientSecret": {
+                    "type": "string",
+                    "description": "The client secret of the payment source. If <code>action</code> is <code>show_payment_instructions</code>, then use this identifier to configure the delayed payment instructions element.",
+                    "readOnly": true,
+                    "example": "9c00d78c-dbad-4303-b366-7e0a49c322e7_246ed54a-0dfc-41f0-9e98-14036adf642e"
+                  },
+                  "sessionId": {
+                    "type": "string",
+                    "description": "The identifier of the payment session",
+                    "readOnly": true,
+                    "example": "f61e26be-5f38-4f39-9ae9-0b3cbff6a14e"
+                  },
+                  "fingerprintToken": {
+                    "type": "string",
+                    "example": "fingerprintToken123"
+                  },
+                  "challengeToken": {
+                    "type": "string",
+                    "example": "challengeToken123"
+                  },
+                  "originKey": {
+                    "type": "string",
+                    "example": "originKey123"
+                  }
+                }
+              }
+            },
+            "description": "If this object exists, it contains the next actions that must be taken to complete payment.",
+            "readOnly": true
           }
         }
       },

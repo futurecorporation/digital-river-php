@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **expires_time** | **\DateTime** | Time at which the information token expires. | [optional] [readonly]
 **live_mode** | **bool** | Has the value true if the object exists in live mode or the value false if the object exists in test mode. | [optional]
 **charges** | [**\DigitalRiver\ApiSdk\Model\Charges[]**](Charges.md) |  | [optional]
+**source** | **string** | The source of the refund. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

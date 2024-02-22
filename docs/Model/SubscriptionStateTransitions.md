@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **failed** | **\DateTime** |  | [optional]
 **cancelled** | **\DateTime** |  | [optional]
 **ended** | **\DateTime** |  | [optional]
+**lapsed** | **\DateTime** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

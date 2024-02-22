@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **string** | The unique identifier of the shipment. | [optional]
 **amount** | **float** | The shipping amount. | [optional]
 **tax_amount** | **float** | The shipping taxable amount. | [optional]
 **description** | **string** | A description of the shipping choice. | [optional]

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **customer_id** | **string** | The identifier of the customer associated with this order. | [optional]
 **currency** | **string** | A three-letter ISO currency code. | [optional]
 **email** | **string** | The customer&#39;s email address. | [optional]
+**language** | **string** | The assigned language. | [optional]
 **locale** | **string** | A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code. | [optional]
 **browser_ip** | **string** | The IP address of the browser used by the customer when placing the order. | [optional]
 **application_id** | **string** | An arbitrary string identifier that can be used to track the application type. | [optional] [readonly]
@@ -51,6 +52,7 @@ Name | Type | Description | Notes
 **selling_entity** | [**\DigitalRiver\ApiSdk\Model\SellingEntity**](SellingEntity.md) |  | [optional]
 **purchase_location** | [**\DigitalRiver\ApiSdk\Model\PurchaseLocation**](PurchaseLocation.md) |  | [optional]
 **customer_type** | [**\DigitalRiver\ApiSdk\Model\CustomerType**](CustomerType.md) |  | [optional]
+**charge_type** | [**\DigitalRiver\ApiSdk\Model\ChargeType**](ChargeType.md) |  | [optional]
 **upstream_id** | **string** | The upstream identifier. | [optional]
 **updated_time** | **\DateTime** | Time at which the order was created. | [optional] [readonly]
 

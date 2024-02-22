@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **source_id** | **string** | The unique identifier of a Source. | [optional]
 **currency** | **string** | A three-letter ISO 4217 currency code. |
 **email** | **string** | The customer&#39;s email address. | [optional]
+**language** | **string** | The assigned language. | [optional]
 **locale** | **string** | A designator that combines the two-letter ISO 639-1 language code with the ISO 3166-1 alpha-2 country code. | [optional]
 **invoice_attribute_id** | **string** | The unique identfier of the invoice attribute. | [optional]
 **application_id** | **string** | An arbitrary string identifier that can be used to track the application type. | [optional]

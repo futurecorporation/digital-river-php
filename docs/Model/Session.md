@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **amount_remaining_to_be_contributed** | **float** | Represents the amount needed to fully fund the transaction | [optional] [readonly]
 **client_secret** | **string** | The client secret to be used by DR.js | [optional] [readonly]
 **state** | **string** | The state of session. | [optional] [readonly]
+**next_action** | [**\DigitalRiver\ApiSdk\Model\SessionNextAction**](SessionNextAction.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

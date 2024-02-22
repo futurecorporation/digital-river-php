@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **sku_group_id** | **string** | The identifier of the SKU group. | [optional]
 **name** | **string** | The name of the product. | [optional]
 **description** | **string** | The description of the product. | [optional]
+**item_breadcrumb** | **string** | The full path to the category where item is included. Categories should be separated by “ &gt; “. | [optional]
 **url** | **string** | The product url. | [optional]
 **country_of_origin** | **string** | The country of origin of the product. | [optional]
 **image** | **string** | The image of the product. | [optional]

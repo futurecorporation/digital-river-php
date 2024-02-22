@@ -58,6 +58,8 @@ docs/Model/Charges.md
 docs/Model/Checkout.md
 docs/Model/CheckoutLinkDetails.md
 docs/Model/CheckoutRequest.md
+docs/Model/CheckoutSessionSubscriptionInfo.md
+docs/Model/CheckoutSessionSubscriptionInfoPlan.md
 docs/Model/CheckoutTaxIdentifierRequest.md
 docs/Model/CountrySpecification.md
 docs/Model/CreateDropInCheckoutTokenResponse.md
@@ -233,6 +235,9 @@ docs/Model/SalesSummary.md
 docs/Model/SalesTransaction.md
 docs/Model/SellingEntity.md
 docs/Model/Session.md
+docs/Model/SessionNextAction.md
+docs/Model/SessionNextActionData.md
+docs/Model/SessionProductDetails.md
 docs/Model/ShipFrom.md
 docs/Model/ShipFrom1.md
 docs/Model/Shipment.md
@@ -290,6 +295,9 @@ docs/Model/UnitAttributes.md
 docs/Model/UpdateCheckoutRequest.md
 docs/Model/UpdateCustomerRequest.md
 docs/Model/UpdateFileLinkRequest.md
+docs/Model/UpdateFulfillmentRequest.md
+docs/Model/UpdateFulfillmentRequestItem.md
+docs/Model/UpdateFulfillmentRequestMetadata.md
 docs/Model/UpdateInvoiceRequest.md
 docs/Model/UpdateOrderRequest.md
 docs/Model/UpdatePlanRequest.md
@@ -369,6 +377,8 @@ lib/Model/Charges.php
 lib/Model/Checkout.php
 lib/Model/CheckoutLinkDetails.php
 lib/Model/CheckoutRequest.php
+lib/Model/CheckoutSessionSubscriptionInfo.php
+lib/Model/CheckoutSessionSubscriptionInfoPlan.php
 lib/Model/CheckoutTaxIdentifierRequest.php
 lib/Model/CountrySpecification.php
 lib/Model/CreateDropInCheckoutTokenResponse.php
@@ -545,6 +555,9 @@ lib/Model/SalesSummary.php
 lib/Model/SalesTransaction.php
 lib/Model/SellingEntity.php
 lib/Model/Session.php
+lib/Model/SessionNextAction.php
+lib/Model/SessionNextActionData.php
+lib/Model/SessionProductDetails.php
 lib/Model/ShipFrom.php
 lib/Model/ShipFrom1.php
 lib/Model/Shipment.php
@@ -602,6 +615,9 @@ lib/Model/UnitAttributes.php
 lib/Model/UpdateCheckoutRequest.php
 lib/Model/UpdateCustomerRequest.php
 lib/Model/UpdateFileLinkRequest.php
+lib/Model/UpdateFulfillmentRequest.php
+lib/Model/UpdateFulfillmentRequestItem.php
+lib/Model/UpdateFulfillmentRequestMetadata.php
 lib/Model/UpdateInvoiceRequest.php
 lib/Model/UpdateOrderRequest.php
 lib/Model/UpdatePlanRequest.php

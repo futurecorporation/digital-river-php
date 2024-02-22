@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **payee_id** | **string** | The ID of the payee. | [optional]
 **payee_name** | **string** | The name of the payee. | [optional]
 **live_mode** | **bool** | Has the value true if the object exists in live mode or the value false if the object exists in test mode. | [optional]
-**order_upstream_id** | **string** | Unique upstream ID for the order. Fixed by Liao | [optional]
+**order_upstream_id** | **string** | Unique upstream ID for the order. | [optional]
 **sku_tax_code** | **string** | The sku tax code. | [optional]
 **ship_from_country** | **string** | Country being shipped from. | [optional]
 **ship_to_country** | **string** | Country being shipped to. | [optional]
