@@ -25667,40 +25667,6 @@
         "title": "Payco",
         "type": "object"
       },
-      "InvoiceStateTransitions": {
-        "description": "fixed by liao, modified from OrderStateTransitions",
-        "title": "InvoiceStateTransitions",
-        "type": "object",
-        "properties": {
-          "draft": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "open": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "void": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "paid": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "uncollectible": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "nullable": true,
-        "readOnly": true
-      },
       "OrderStateTransitions": {
         "title": "OrderStateTransitions",
         "type": "object",
@@ -33593,9 +33559,9 @@
             "description": "Has the value true if the object exists in live mode or the value false if the object exists in test mode.",
             "example": true
           },
-          "orderUpstreamID": {
+          "orderUpstreamId": {
             "type": "string",
-            "description": "Unique upstream ID for the order.",
+            "description": "Unique upstream ID for the order. Fixed by Liao",
             "example": "fe18c37b-f76b-4eaa-892a-b1aca88cf46d"
           },
           "skuTaxCode": {
@@ -34025,6 +33991,40 @@
             }
           }
         }
+      },
+      "InvoiceStateTransitions": {
+        "description": "fixed by liao, modified from OrderStateTransitions",
+        "title": "InvoiceStateTransitions",
+        "type": "object",
+        "properties": {
+          "draft": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "open": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "void": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "paid": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "uncollectible": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "nullable": true,
+        "readOnly": true
       },
       "ShippingQuoteResponse": {
         "title": "ShippingQuoteResponse",

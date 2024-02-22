@@ -258,7 +258,7 @@ class SalesTransaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'payee_id' => 'payeeId',
         'payee_name' => 'payeeName',
         'live_mode' => 'liveMode',
-        'order_upstream_id' => 'orderUpstreamID',
+        'order_upstream_id' => 'orderUpstreamId',
         'sku_tax_code' => 'skuTaxCode',
         'ship_from_country' => 'shipFromCountry',
         'ship_to_country' => 'shipToCountry',
@@ -986,7 +986,7 @@ class SalesTransaction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_upstream_id
      *
-     * @param string|null $order_upstream_id Unique upstream ID for the order.
+     * @param string|null $order_upstream_id Unique upstream ID for the order. Fixed by Liao
      *
      * @return self
      */
