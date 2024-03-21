@@ -615,7 +615,7 @@ class FulfillmentResponseItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets distributor_cost
      *
-     * @param float|null $distributor_cost The distributor's cost.
+     * @param float|null $distributor_cost The distributor’s total cost for this <code>items[]</code>, inclusive of its <code>quantity</code>. In other words, the distributor’s per unit product cost multiplied by the <code>quantity</code> of shipped units.<br>
      *
      * @return self
      */

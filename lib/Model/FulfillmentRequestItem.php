@@ -629,7 +629,7 @@ class FulfillmentRequestItem implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets distributor_cost
      *
-     * @param float|null $distributor_cost The distributor's cost. If provided, then <code>currency</code> is required.
+     * @param float|null $distributor_cost The distributor’s total cost for this <code>items[]</code>, inclusive of its <code>quantity</code>. In other words, the value should equal the distributor’s per unit product cost multiplied by the <code>quantity</code> of shipped units.<br> <br>If you assign a value to <code>distributorCost</code>, then <code>currency</code> is required.
      *
      * @return self
      */

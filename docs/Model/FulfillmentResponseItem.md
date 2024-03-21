@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **tracking_number** | **string** | A tracking number provided by the shipping company | [optional]
 **tracking_url** | **string** | The URL of the tracking page for the fulfillment | [optional]
 **subfulfiller_id** | **string** | The unique identifer of the subfulfiller. | [optional]
-**distributor_cost** | **float** | The distributor&#39;s cost. | [optional]
+**distributor_cost** | **float** | The distributor’s total cost for this &lt;code&gt;items[]&lt;/code&gt;, inclusive of its &lt;code&gt;quantity&lt;/code&gt;. In other words, the distributor’s per unit product cost multiplied by the &lt;code&gt;quantity&lt;/code&gt; of shipped units.&lt;br&gt; | [optional]
 **shipping_cost** | **float** | The cost of shipping. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

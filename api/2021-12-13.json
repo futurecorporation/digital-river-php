@@ -4,7 +4,7 @@
     "title": "Digital River API Reference",
     "description": "removed by liao, too long",
     "version": "2024",
-    "x-generate-timestamp": "2024-01-30T18:42:51.421623Z",
+    "x-generate-timestamp": "2024-02-29T18:35:53.285277Z",
     "x-logo": {
       "url": "https://www.digitalriver.com/wp-content/uploads/sites/8/Digital-River-Logo_160x70.png",
       "backgroundColor": "#FFFFFF",
@@ -29237,7 +29237,7 @@
           },
           "distributorCost": {
             "type": "number",
-            "description": "The distributor's cost. If provided, then <code>currency</code> is required.",
+            "description": "The distributor’s total cost for this <code>items[]</code>, inclusive of its <code>quantity</code>. In other words, the value should equal the distributor’s per unit product cost multiplied by the <code>quantity</code> of shipped units.<br>\n<br>If you assign a value to <code>distributorCost</code>, then <code>currency</code> is required.",
             "format": "double",
             "example": 10.0
           },
@@ -32418,7 +32418,7 @@
           },
           "distributorCost": {
             "type": "number",
-            "description": "The distributor's cost.",
+            "description": "The distributor’s total cost for this <code>items[]</code>, inclusive of its <code>quantity</code>. In other words, the distributor’s per unit product cost multiplied by the <code>quantity</code> of shipped units.<br>",
             "format": "double",
             "example": 10.0
           },
