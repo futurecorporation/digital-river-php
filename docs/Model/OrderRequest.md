@@ -30,6 +30,6 @@ Name | Type | Description | Notes
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 **purchase_location** | [**\DigitalRiver\ApiSdk\Model\PurchaseLocation**](PurchaseLocation.md) |  | [optional]
 **disclosures** | [**\DigitalRiver\ApiSdk\Model\DisclosureDetails[]**](DisclosureDetails.md) |  | [optional]
-**upstream_id** | **string** | The upstream identifier. | [optional]
+**upstream_id** | **string** | Any identifier that you want to associate with the resource. For tracking purposes, we recommend you provide the universally unique identifier (UUID) that identifies the corresponding order in your system. Unlike &lt;code&gt;metadata&lt;/code&gt;, you can use this value as a query parameter in &lt;code&gt;GET&lt;/code&gt; requests. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

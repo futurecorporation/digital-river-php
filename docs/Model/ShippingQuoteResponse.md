@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currency** | **string** | A three-letter ISO currency code. | [optional]
+**currency** | **string** | A three-letter ISO currency code. the cost of each shipping quote is converted into. | [optional]
 **quotes** | [**\DigitalRiver\ApiSdk\Model\ShippingQuote[]**](ShippingQuote.md) |  | [optional]
 **live_mode** | **bool** | Has the value true if the object exists in live mode or the value false if the object exists in test mode. | [optional]
 

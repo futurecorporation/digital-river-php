@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **ship_to** | [**\DigitalRiver\ApiSdk\Model\Shipping**](Shipping.md) |  |
 **shipping_choice** | [**\DigitalRiver\ApiSdk\Model\GlobalFulfillmentShippingChoice**](GlobalFulfillmentShippingChoice.md) |  |
 **items** | [**\DigitalRiver\ApiSdk\Model\LineItemRequest[]**](LineItemRequest.md) |  |
+**metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

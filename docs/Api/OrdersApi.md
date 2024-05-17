@@ -9,6 +9,7 @@ All URIs are relative to https://api.digitalriver.com, except if the operation d
 | [**refreshOrder()**](OrdersApi.md#refreshOrder) | **POST** /orders/{id}/refresh | Refreshes an existing order. |
 | [**retrieveOrderTracking()**](OrdersApi.md#retrieveOrderTracking) | **GET** /orders/{id}/tracking | Tracks Global Logistics shipments. |
 | [**retrieveOrders()**](OrdersApi.md#retrieveOrders) | **GET** /orders/{id} | Gets an order by ID. |
+| [**retrieveOrdersTaxes()**](OrdersApi.md#retrieveOrdersTaxes) | **GET** /orders/{id}/tax-details | Lists an order&#39;s tax details. |
 | [**updateOrders()**](OrdersApi.md#updateOrders) | **POST** /orders/{id} | Updates an existing order. |
 
 
@@ -364,6 +365,66 @@ try {
 ### Return type
 
 [**\DigitalRiver\ApiSdk\Model\Order**](../Model/Order.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `retrieveOrdersTaxes()`
+
+```php
+retrieveOrdersTaxes($id): \DigitalRiver\ApiSdk\Model\OrderTaxDetails
+```
+
+Lists an order's tax details.
+
+Retrieves the tax details of each line item in an order. You're required to specify the order's identifier as a path parameter.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DigitalRiver\ApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DigitalRiver\ApiSdk\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | Order ID
+
+try {
+    $result = $apiInstance->retrieveOrdersTaxes($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->retrieveOrdersTaxes: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Order ID | |
+
+### Return type
+
+[**\DigitalRiver\ApiSdk\Model\OrderTaxDetails**](../Model/OrderTaxDetails.md)
 
 ### Authorization
 

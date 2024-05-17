@@ -21,7 +21,6 @@ docs/Api/InventoryLevelsApi.md
 docs/Api/InvoicesApi.md
 docs/Api/LogisticsReturnsApi.md
 docs/Api/OrdersApi.md
-docs/Api/PayoutTransactionsApi.md
 docs/Api/PayoutsApi.md
 docs/Api/PlansApi.md
 docs/Api/RefundsApi.md
@@ -71,6 +70,7 @@ docs/Model/CustomerRequest.md
 docs/Model/CustomerTaxIdentifier.md
 docs/Model/CustomerType.md
 docs/Model/CustomerType1.md
+docs/Model/DeliveryInformation.md
 docs/Model/DirectDebit.md
 docs/Model/DirectDebitRedirect.md
 docs/Model/Disclosure.md
@@ -86,6 +86,7 @@ docs/Model/DropInSku.md
 docs/Model/Duties.md
 docs/Model/Error.md
 docs/Model/Errors.md
+docs/Model/EstimatedArrival.md
 docs/Model/Event.md
 docs/Model/EventData.md
 docs/Model/Fee.md
@@ -186,9 +187,12 @@ docs/Model/OrderDetails.md
 docs/Model/OrderItem.md
 docs/Model/OrderItem1.md
 docs/Model/OrderItemStateTransitions.md
+docs/Model/OrderItems.md
 docs/Model/OrderRefund.md
 docs/Model/OrderRequest.md
 docs/Model/OrderStateTransitions.md
+docs/Model/OrderTaxDetails.md
+docs/Model/OrderTaxes.md
 docs/Model/OrderTracking.md
 docs/Model/Organization.md
 docs/Model/Owner.md
@@ -299,6 +303,7 @@ docs/Model/UpdateFulfillmentRequest.md
 docs/Model/UpdateFulfillmentRequestItem.md
 docs/Model/UpdateFulfillmentRequestMetadata.md
 docs/Model/UpdateInvoiceRequest.md
+docs/Model/UpdateOrderItems.md
 docs/Model/UpdateOrderRequest.md
 docs/Model/UpdatePlanRequest.md
 docs/Model/UpdateRefundRequest.md
@@ -315,6 +320,7 @@ docs/Model/WebhookRequestAuthentication.md
 docs/Model/WebhookRequestOauth.md
 docs/Model/WebhookUpdateRequest.md
 docs/Model/WebhookUpdateRequestOauth.md
+docs/Model/WeekendService.md
 docs/Model/WireTransfer.md
 git_push.sh
 lib/Api/ChargesApi.php
@@ -337,7 +343,6 @@ lib/Api/InventoryLevelsApi.php
 lib/Api/InvoicesApi.php
 lib/Api/LogisticsReturnsApi.php
 lib/Api/OrdersApi.php
-lib/Api/PayoutTransactionsApi.php
 lib/Api/PayoutsApi.php
 lib/Api/PlansApi.php
 lib/Api/RefundsApi.php
@@ -390,6 +395,7 @@ lib/Model/CustomerRequest.php
 lib/Model/CustomerTaxIdentifier.php
 lib/Model/CustomerType.php
 lib/Model/CustomerType1.php
+lib/Model/DeliveryInformation.php
 lib/Model/DirectDebit.php
 lib/Model/DirectDebitRedirect.php
 lib/Model/Disclosure.php
@@ -405,6 +411,7 @@ lib/Model/DropInSku.php
 lib/Model/Duties.php
 lib/Model/Error.php
 lib/Model/Errors.php
+lib/Model/EstimatedArrival.php
 lib/Model/Event.php
 lib/Model/EventData.php
 lib/Model/Fee.php
@@ -506,9 +513,12 @@ lib/Model/OrderDetails.php
 lib/Model/OrderItem.php
 lib/Model/OrderItem1.php
 lib/Model/OrderItemStateTransitions.php
+lib/Model/OrderItems.php
 lib/Model/OrderRefund.php
 lib/Model/OrderRequest.php
 lib/Model/OrderStateTransitions.php
+lib/Model/OrderTaxDetails.php
+lib/Model/OrderTaxes.php
 lib/Model/OrderTracking.php
 lib/Model/Organization.php
 lib/Model/Owner.php
@@ -619,6 +629,7 @@ lib/Model/UpdateFulfillmentRequest.php
 lib/Model/UpdateFulfillmentRequestItem.php
 lib/Model/UpdateFulfillmentRequestMetadata.php
 lib/Model/UpdateInvoiceRequest.php
+lib/Model/UpdateOrderItems.php
 lib/Model/UpdateOrderRequest.php
 lib/Model/UpdatePlanRequest.php
 lib/Model/UpdateRefundRequest.php
@@ -635,6 +646,14 @@ lib/Model/WebhookRequestAuthentication.php
 lib/Model/WebhookRequestOauth.php
 lib/Model/WebhookUpdateRequest.php
 lib/Model/WebhookUpdateRequestOauth.php
+lib/Model/WeekendService.php
 lib/Model/WireTransfer.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/DeliveryInformationTest.php
+test/Model/EstimatedArrivalTest.php
+test/Model/OrderItemsTest.php
+test/Model/OrderTaxDetailsTest.php
+test/Model/OrderTaxesTest.php
+test/Model/UpdateOrderItemsTest.php
+test/Model/WeekendServiceTest.php

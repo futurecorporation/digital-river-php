@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **weight** | **float** | The weight of the product measured in the unit specified by weightUnit. | [optional]
 **weight_unit** | **string** | The unit of measurement applied to the weight. | [optional]
 **item_breadcrumb** | **string** | The full path to the category where item is included. Categories should be separated by “ &gt; “. | [optional]
+**partner_account_id** | **string** | The unique, Digital River identifier (account Id) of the partner associated with the sku. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

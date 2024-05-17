@@ -4,7 +4,7 @@
     "title": "Digital River API Reference",
     "description": "removed by liao, too long",
     "version": "2024",
-    "x-generate-timestamp": "2024-02-29T18:35:53.285277Z",
+    "x-generate-timestamp": "2024-05-09T15:31:55.367016Z",
     "x-logo": {
       "url": "https://www.digitalriver.com/wp-content/uploads/sites/8/Digital-River-Logo_160x70.png",
       "backgroundColor": "#FFFFFF",
@@ -14,146 +14,12 @@
   "servers": [
     {
       "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://github.digitalriverws.net/"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/pwehr/FulfillmentCancellations/1.0.0",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/GlobalFulfillmentOrders/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/Shipments/1.0.0",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/InventoryItems/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/InventoryLevels/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://github.digitalriverws.net/"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/Plans/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://www.digitalriver.com/docs/digital-river-api-reference/"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/Reservations/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/Shipments/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://github.digitalriverws.net/"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/ShippingQuotes/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://github.digitalriverws.net/"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/SkuGroups/1.0.1"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/Subscriptions/master",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/Subscriptions/1.0.2",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://api.digitalriver.com"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/TaxIdentifiers/1.0.0",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX/TaxIdentifiers/1.0.2",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://virtserver.swaggerhub.com/DigitalRiverX",
-      "description": "SwaggerHub API Auto Mocking"
-    },
-    {
-      "url": "https://api.digitalriver.com"
     }
   ],
   "tags": [
     {
       "name": "Charges",
-      "description": "The [Charge](https://docs.digitalriver.com/digital-river-api/order-management/orders/payment-charges) object contains the details of a charge.\n<a name=\"charge-object\"></a>       \n<br><br>Version:master"
+      "description": "The [Charge](https://docs.digitalriver.com/digital-river-api/developer-resources/digital-river-api-reference/payment-charges) object contains the details of a charge. For details on the distinction between charge refunds and refunds, refer to [How refunds differ from charge refunds](https://docs.digitalriver.com/digital-river-api/developer-resources/digital-river-api-reference/payment-charges#how-refunds-differ-from-charge-refunds). \n<a name=\"charge-object\"></a>       \n<br><br>Version:master"
     },
     {
       "name": "Checkouts",
@@ -229,7 +95,7 @@
     },
     {
       "name": "Refunds",
-      "description": "A [refund](https://docs.digitalriver.com/digital-river-api/order-management/returns-and-refunds-1/refunds) allows you to issue customers full or partial refunds on product costs, shipping expenses, taxes, duties, and fees.<br><br>Version:master"
+      "description": "A [refund](https://docs.digitalriver.com/digital-river-api/order-management/returns-and-refunds-1/refunds/issuing-refunds) allows you to issue customers full or partial refunds on product costs, shipping expenses, taxes, duties, and fees. For details on the distinction between refunds and charge refunds, refer to [How refunds differ from charge refunds](https://docs.digitalriver.com/digital-river-api/developer-resources/digital-river-api-reference/payment-charges#how-refunds-differ-from-charge-refunds).<br><br>Version:master"
     },
     {
       "name": "Reservations",
@@ -14637,6 +14503,164 @@
         ]
       }
     },
+    "/orders/{id}/tax-details": {
+      "get": {
+        "tags": ["Orders"],
+        "summary": "Lists an order's tax details.",
+        "description": "Retrieves the tax details of each line item in an order. You're required to specify the order's identifier as a path parameter.",
+        "operationId": "retrieveOrdersTaxes",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Order ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderTaxDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401 Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "404 Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "405 Method Not Allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "406 Not Acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "408": {
+            "description": "408 Request Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "429 Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "502 Bad Gateway Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "503 Service Unavailable Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "504 Gateway Timeout Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Errors"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/payouts": {
       "get": {
         "tags": ["Payouts"],
@@ -15101,7 +15125,7 @@
     },
     "/payouts/{id}/transactions": {
       "get": {
-        "tags": ["Payout transactions"],
+        "tags": ["Payouts"],
         "summary": "Lists the payout transactions for a payout.",
         "description": "Retrieves the details of the payout transactions for a payout. Supply the unique identifier of the payout.",
         "operationId": "listPayoutTransactions",
@@ -24266,6 +24290,11 @@
             "description": "A two-letter Alpha-2 country code as described in the ISO 3166 international standard.",
             "example": "US"
           },
+          "partnerAccountId": {
+            "type": "string",
+            "description": "The unique, Digital River identifier (account Id) of the partner associated with the sku.",
+            "example": "00g6atnynbl2wFsFG357"
+          },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
           }
@@ -24319,7 +24348,7 @@
           },
           "currency": {
             "type": "string",
-            "description": "A three-letter ISO currency code.",
+            "description": "A valid [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) code that represents the currency the distributor should be paid in. If <code> items[].distributorCost</code> or <code>items[].shippingCost</code> are specified, then <code>currency</code> is required. The value doesn't have to be the same as the [Order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) <code>currency</code>.",
             "example": "USD"
           },
           "metadata": {
@@ -24911,17 +24940,23 @@
             "description": "The inventory item identifier.",
             "example": "abc"
           },
+          "shipping": {
+            "type": "number",
+            "description": "The shipping cost for this line item",
+            "format": "double",
+            "example": 5
+          },
           "subtotal": {
             "type": "number",
-            "description": ".",
+            "description": "The product price of this line item multiplied by its quantity.",
             "format": "double",
-            "example": 9.99
+            "example": 10
           },
           "total": {
             "type": "number",
             "description": "The aggregate price of the product inclusive of taxes, discounts, fees, shipping, handling and duties.",
             "format": "double",
-            "example": 9.99
+            "example": 10
           },
           "name": {
             "type": "string",
@@ -24944,6 +24979,9 @@
           },
           "tax": {
             "$ref": "#/components/schemas/GlobalFulfillmentTax"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
           }
         },
         "example": [
@@ -24992,7 +25030,7 @@
           },
           "currency": {
             "type": "string",
-            "description": "A three-letter ISO currency code.",
+            "description": "A valid [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) code that represents the currency the distributor is paid in.",
             "example": "USD"
           },
           "liveMode": {
@@ -25714,6 +25752,81 @@
           }
         }
       },
+      "OrderTaxes": {
+        "title": "OrderTaxes",
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string",
+            "description": "The country where taxes are assessed.",
+            "example": "CA"
+          },
+          "region": {
+            "type": "string",
+            "description": "The region where taxes are assessed. This is typically a state or province.",
+            "example": "MN"
+          },
+          "jurisdictionType": {
+            "type": "string",
+            "description": "The type of jurisdiction that assessed the tax. This is often a country, state, province, county, city, or district but can also be a special jurisdiction that collects a tax for a specific purpose, such as housing or transportation.",
+            "example": "Country"
+          },
+          "jurisdictionName": {
+            "type": "string",
+            "description": "The name of the jurisdiction that assessed the tax.",
+            "example": "TRANSIT IMPROVEMENT (RAMSEY CO)"
+          },
+          "taxType": {
+            "type": "string",
+            "description": "The type of tax.",
+            "example": "Sales"
+          },
+          "taxSubType": {
+            "type": "string",
+            "description": "The subtype of tax.",
+            "example": "0"
+          },
+          "taxName": {
+            "type": "string",
+            "description": "The name of the tax.",
+            "example": "MN SPECIAL TAX"
+          },
+          "exemptUnit": {
+            "type": "number",
+            "description": "The number of units that are exempt.",
+            "example": 0
+          },
+          "nonTaxableUnit": {
+            "type": "number",
+            "description": "The number of units that are nontaxable.",
+            "example": 0
+          },
+          "unitOfBasis": {
+            "type": "string",
+            "description": "The units the tax is based upon.",
+            "example": "PerCurrencyUnit"
+          },
+          "rate": {
+            "type": "number",
+            "description": "The tax rate percentage.",
+            "format": "double",
+            "example": 0.08
+          },
+          "effectiveRate": {
+            "type": "number",
+            "description": "The effective tax rate percentage.",
+            "format": "double",
+            "example": 0.080016
+          },
+          "taxAmount": {
+            "type": "number",
+            "description": "The amount of tax.",
+            "example": 8
+          }
+        },
+        "description": "The tax details of a line item",
+        "nullable": true
+      },
       "InvoiceAttributes": {
         "title": "InvoiceAttributes",
         "type": "object",
@@ -25852,6 +25965,9 @@
             "type": "boolean",
             "description": "Has the value true if the object exists in live mode or the value false if the object exists in test mode.",
             "example": false
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
           }
         }
       },
@@ -26316,27 +26432,28 @@
         "properties": {
           "weight": {
             "type": "integer",
-            "description": "The box’s weight.",
+            "description": "Represents the scale weight of the package (i.e., with the goods and dunnage inside of it) at the warehouse and must be greater than <code>0</code>. If you don't have a [default package weight](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then its required.",
             "example": 5
           },
           "weightUnit": {
             "type": "string",
             "description": "The box’s weight unit.",
-            "example": "oz"
+            "example": "oz",
+            "enum": ["oz", "lb", "g", "kg"]
           },
           "height": {
             "type": "integer",
-            "description": "The box’s height.",
+            "description": "Represents the actual height of the package at the warehouse and must be greater than <code>0</code>. If you don't have a [default package height](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then its required.",
             "example": 5
           },
           "width": {
             "type": "integer",
-            "description": "The box’s width.",
+            "description": "Represents the actual width of the package at the warehouse and must be greater than <code>0</code>. If you don't have a [default package width](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then its required.",
             "example": 5
           },
           "length": {
             "type": "integer",
-            "description": "The box’s length.",
+            "description": "Represents the actual length of the package at the warehouse and must be greater than <code>0</code>. If you don't have a [default package length](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then its required.",
             "example": 5
           },
           "items": {
@@ -26404,9 +26521,8 @@
             "type": "string",
             "example": "Standard"
           },
-          "estimatedDelivery": {
-            "type": "string",
-            "example": "3-5 days"
+          "deliveryInformation": {
+            "$ref": "#/components/schemas/DeliveryInformation"
           },
           "shippingTerms": {
             "type": "string",
@@ -28358,6 +28474,11 @@
             "type": "string",
             "description": "The manufacturer's part number.",
             "example": "SWG1224J10L"
+          },
+          "partnerAccountId": {
+            "type": "string",
+            "description": "The unique, Digital River identifier (account Id) of the partner associated with the sku.",
+            "example": "00g6atnynbl2wFsFG357"
           }
         }
       },
@@ -28860,6 +28981,12 @@
             "nullable": true,
             "example": "0916805858"
           },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateOrderItems"
+            }
+          },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
           }
@@ -28881,6 +29008,25 @@
             "example": 1
           }
         }
+      },
+      "OrderTaxDetails": {
+        "title": "OrderTaxDetails",
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "string",
+            "description": "The unique identifier of the order.",
+            "example": "ord_5823594809"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderItems"
+            }
+          }
+        },
+        "description": "The tax details of each line item in an order.",
+        "nullable": true
       },
       "ReturnResponse": {
         "title": "ReturnResponse",
@@ -29232,18 +29378,18 @@
           },
           "subfulfillerId": {
             "type": "string",
-            "description": "The unique identifer of the subfulfiller.",
+            "description": "The unique identifer of the distributor. If you don't provide it, then Digital River’s accounting service won’t have the information it needs to make a payout to the distributor and the fulfillment can't be resolved.",
             "example": "hjueo9g"
           },
           "distributorCost": {
             "type": "number",
-            "description": "The distributor’s total cost for this <code>items[]</code>, inclusive of its <code>quantity</code>. In other words, the value should equal the distributor’s per unit product cost multiplied by the <code>quantity</code> of shipped units.<br>\n<br>If you assign a value to <code>distributorCost</code>, then <code>currency</code> is required.",
+            "description": "The distributor’s total cost for this <code>items[]</code>, inclusive of its <code>quantity</code>. In other words, the value should equal the distributor’s per unit product cost multiplied by the <code>quantity</code> of shipped units.<br>\n<br>The <code>distributorCost</code> can't be less then <code>0</code>.\n\n<br>If provided, then <code>currency</code> is required.",
             "format": "double",
             "example": 10.0
           },
           "shippingCost": {
             "type": "number",
-            "description": "The cost of shipping. If provided, then <code>currency</code> is required.",
+            "description": "The cost to ship the line item.<br><br> If provided, then <code>currency</code> is required.<br>\n<br>The <code>shippingCost</code> can't be less then <code>0</code>.",
             "format": "double",
             "example": 10.0
           }
@@ -29556,6 +29702,11 @@
             "description": "The full path to the category where item is included. Categories should be separated by “ > “.",
             "example": "Sports & Outdoors > Exercise & Fitness > Wearable Technology > Fitness Trackers"
           },
+          "partnerAccountId": {
+            "type": "string",
+            "description": "The unique, Digital River identifier (account Id) of the partner associated with the sku.",
+            "example": "00g6atnynbl2wFsFG357"
+          },
           "liveMode": {
             "type": "boolean",
             "description": "Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.",
@@ -29589,6 +29740,22 @@
           },
           "productDetails": {
             "$ref": "#/components/schemas/ProductDetails"
+          }
+        }
+      },
+      "WeekendService": {
+        "title": "WeekendService",
+        "type": "object",
+        "properties": {
+          "saturdayDelivery": {
+            "type": "boolean",
+            "description": "If <code>true</code>, then delivery will be scheduled for Saturday and an additional fee is charged for the service.  If <code>false</code>, then delivery on that day is not available or it is available but additional fees are not collected. In this case, check <code>dayOfWeek</code> to determine if it's a Saturday delivery.",
+            "example": true
+          },
+          "sundayDelivery": {
+            "type": "boolean",
+            "description": "If <code>true</code>, then delivery will be scheduled for Sunday and an additional fee is charged for the service.  If <code>false</code>, then delivery on that day is not available or it is available but additional fees are not collected. In this case, check <code>dayOfWeek</code> to determine if it's a Sunday delivery.",
+            "example": false
           }
         }
       },
@@ -30484,6 +30651,23 @@
           }
         }
       },
+      "EstimatedArrival": {
+        "title": "EstimatedArrival",
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The estimated date and time the shipment will arrive at its final destination.",
+            "format": "date-time",
+            "example": "2018-04-25T20:36:00Z"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "description": "The estimated day of the week that the shipment will arrive at its final destination.",
+            "example": "Tuesday"
+          }
+        }
+      },
       "ShippingMethodQuoteResponse": {
         "title": "ShippingMethodQuoteResponse",
         "type": "object",
@@ -30742,6 +30926,11 @@
             "description": "The full path to the category where item is included. Categories should be separated by “ > “.",
             "example": "Sports & Outdoors > Exercise & Fitness > Wearable Technology > Fitness Trackers"
           },
+          "partnerAccountId": {
+            "type": "string",
+            "description": "The unique, Digital River identifier (account Id) of the partner associated with the sku.",
+            "example": "00g6atnynbl2wFsFG357"
+          },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
           }
@@ -30828,6 +31017,11 @@
             "type": "string",
             "description": "The full path to the category where item is included. Categories should be separated by “ > “.",
             "example": "Sports & Outdoors > Exercise & Fitness > Wearable Technology > Fitness Trackers"
+          },
+          "partnerAccountId": {
+            "type": "string",
+            "description": "The unique, Digital River identifier (account Id) of the partner associated with the sku.",
+            "example": "00g6atnynbl2wFsFG357"
           },
           "metadata": {
             "$ref": "#/components/schemas/Metadata"
@@ -31102,27 +31296,28 @@
           },
           "weight": {
             "type": "integer",
-            "description": "The box’s weight.",
+            "description": "Represents an approximation of the product and packaging weight. It must be greater than <code>0</code>. If you don't have a [default package weight](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account and <code>weight</code> values do not exist in the <code>items[].productDetails</code> of this <code>packages[]</code>, then it's required.",
             "example": 5
           },
           "weightUnit": {
             "type": "string",
-            "description": "The box’s weight unit.",
-            "example": "oz"
+            "description": "The box’s weight unit. The default is <code>lb</code>.",
+            "example": "oz",
+            "enum": ["oz", "lb", "g", "kg"]
           },
           "height": {
             "type": "integer",
-            "description": "The box’s height.",
+            "description": "The package's height. It must greater than <code>0</code> and should be defined in inches. If you don't have a [default package height](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then it's required.",
             "example": 5
           },
           "width": {
             "type": "integer",
-            "description": "The box’s width.",
+            "description": "The package's width. It must greater than <code>0</code> and should be defined in inches. If you don't have a [default package width](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then it's required.",
             "example": 5
           },
           "length": {
             "type": "integer",
-            "description": "The box’s length.",
+            "description": "The package's length. It must greater than <code>0</code> and should be defined in inches. If you don't have a [default package length](https://docs.digitalriver.com/digital-river-api/using-our-services/global-logistics#default-box) saved to your account, then it's required.",
             "example": 5
           }
         }
@@ -31538,6 +31733,11 @@
             "type": "string",
             "description": "The manufacturer's part number.",
             "example": "SWG1224J10L"
+          },
+          "partnerAccountId": {
+            "type": "string",
+            "description": "The unique, Digital River identifier (account Id) of the partner associated with the sku.",
+            "example": "00g6atnynbl2wFsFG357"
           }
         }
       },
@@ -32352,7 +32552,7 @@
           },
           "upstreamId": {
             "type": "string",
-            "description": "The upstream identifier.",
+            "description": "Any identifier that you want to associate with the resource. For tracking purposes, we recommend you provide the universally unique identifier (UUID) that identifies the corresponding order in your system. Unlike <code>metadata</code>, you can use this value as a query parameter in <code>GET</code> requests.",
             "example": "7765374748"
           },
           "disclosures": {
@@ -32362,6 +32562,35 @@
             }
           }
         }
+      },
+      "DeliveryInformation": {
+        "title": "DeliveryInformation",
+        "type": "object",
+        "properties": {
+          "businessDaysInTransit": {
+            "type": "string",
+            "description": "The estimated number of business days that the shipment will take to arrive at its final destination. Its value might be a single day or a range of days.",
+            "example": "3 - 5 Business Days"
+          },
+          "estimatedArrival": {
+            "$ref": "#/components/schemas/EstimatedArrival"
+          },
+          "pickupDate": {
+            "type": "string",
+            "description": "The estimated time and date that the carrier will take possession of the packages in the shipment.",
+            "format": "date-time",
+            "example": "2018-04-25T20:36:00Z"
+          },
+          "weekendService": {
+            "$ref": "#/components/schemas/WeekendService"
+          },
+          "supportCutoffTime": {
+            "type": "string",
+            "description": "The time of day by which the carrier must take possession of the shipment on <code>pickUpDate</code> for it to get to its final destination by <code>estimatedArrival.date</code>.",
+            "example": "180000"
+          }
+        },
+        "description": "Represents a shipping option's delivery information. The <code>estimatedArrival</code> is conditional on <code>pickupDate</code> and <code>supportCutoffTime</code>. If the final mile carrier collects the shipment by <code>supportCutoffTime</code> on <code>pickupDate</code>, then it should be at its destination by <code>estimatedArrival.date</code>."
       },
       "FulfillmentResponseItem": {
         "title": "FulfillmentResponseItem",
@@ -32413,7 +32642,7 @@
           },
           "subfulfillerId": {
             "type": "string",
-            "description": "The unique identifer of the subfulfiller.",
+            "description": "The unique identifer of the distributor.",
             "example": "hjueo9g"
           },
           "distributorCost": {
@@ -32424,7 +32653,7 @@
           },
           "shippingCost": {
             "type": "number",
-            "description": "The cost of shipping.",
+            "description": "The cost to ship the line item.",
             "format": "double",
             "example": 10.0
           }
@@ -32472,6 +32701,31 @@
             "$ref": "#/components/schemas/AdditionalAddressInfo"
           }
         }
+      },
+      "OrderItems": {
+        "title": "OrderItems",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identfier of a line item.",
+            "example": "5823594809"
+          },
+          "taxDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderTaxes"
+            }
+          },
+          "shippingTaxDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderTaxes"
+            }
+          }
+        },
+        "description": "The unique identifier and tax details of each line item in an order.",
+        "nullable": true
       },
       "SkuGroup": {
         "title": "SkuGroup",
@@ -32905,7 +33159,8 @@
           "weightUnit": {
             "type": "string",
             "description": "The box’s weight unit.",
-            "example": "oz"
+            "example": "oz",
+            "enum": ["oz", "lb", "g", "kg"]
           },
           "height": {
             "type": "integer",
@@ -33511,7 +33766,6 @@
                 "skuId": "5823594809",
                 "price": 9.99,
                 "discount": {
-                  "quantity 1": null,
                   "amountOff": 10
                 }
               },
@@ -33520,7 +33774,6 @@
                 "price": 9.99,
                 "quantity": 2,
                 "discount": {
-                  "quantity 2": null,
                   "amountOff": 10
                 }
               },
@@ -33566,7 +33819,7 @@
           },
           "upstreamId": {
             "type": "string",
-            "description": "The upstream identifier.",
+            "description": "Any identifier that you want to associate with the resource. For tracking purposes, we recommend you provide the universally unique identifier (UUID) that identifies the corresponding order in your system. Unlike <code>metadata</code>, you can use this value as a query parameter in <code>GET</code> requests.",
             "example": "7765374748"
           }
         }
@@ -33809,7 +34062,7 @@
             "$ref": "#/components/schemas/AdditionalAddressInfo"
           }
         },
-        "description": "The address from which a physical product is shipped."
+        "description": "The address of the warehouse from which a physical product is shipped."
       },
       "File": {
         "title": "File",
@@ -34434,6 +34687,21 @@
             "description": "Country listed on shopper's billing address.",
             "example": "US"
           },
+          "shipFromState": {
+            "type": "string",
+            "description": "The state, county, province, or region being shipped from.",
+            "example": "MN"
+          },
+          "shipToState": {
+            "type": "string",
+            "description": "The state, county, province, or region being shipped to.",
+            "example": "MN"
+          },
+          "billToState": {
+            "type": "string",
+            "description": "The state, county, province, or region being billed to.",
+            "example": "MN"
+          },
           "paymentType": {
             "type": "string",
             "description": "Type of payment used.",
@@ -34550,17 +34818,23 @@
             "description": "The inventory item identifier.",
             "example": "abc"
           },
+          "shipping": {
+            "type": "number",
+            "description": "The shipping cost for this line item",
+            "format": "double",
+            "example": 5
+          },
           "subtotal": {
             "type": "number",
-            "description": ".",
+            "description": "The product price of this line item multiplied by its quantity.",
             "format": "double",
-            "example": 9.99
+            "example": 10
           },
           "total": {
             "type": "number",
             "description": "The aggregate price of the product inclusive of taxes, discounts, fees, shipping, handling and duties.",
             "format": "double",
-            "example": 9.99
+            "example": 10
           },
           "name": {
             "type": "string",
@@ -34617,6 +34891,9 @@
             "readOnly": true,
             "example": "pending",
             "enum": ["pending", "backordered", "cancelled", "shipped"]
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
           }
         },
         "example": [
@@ -34839,6 +35116,9 @@
             "items": {
               "$ref": "#/components/schemas/LineItemRequest"
             }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
           }
         }
       },
@@ -34847,6 +35127,7 @@
         "type": "object",
         "properties": {
           "draft": {
+            "description": "add by Liao",
             "type": "string",
             "format": "date-time",
             "nullable": true
@@ -34867,6 +35148,7 @@
             "nullable": true
           },
           "void": {
+            "description": "add by Liao",
             "type": "string",
             "format": "date-time",
             "nullable": true
@@ -34880,7 +35162,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "A three-letter ISO currency code.",
+            "description": "A three-letter ISO currency code. the cost of each shipping quote is converted into.",
             "example": "USD"
           },
           "quotes": {
@@ -34968,6 +35250,20 @@
             "type": "string",
             "description": "The ID of an existing customer.",
             "example": "5774321009"
+          }
+        }
+      },
+      "UpdateOrderItems": {
+        "title": "UpdateOrderItems",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the item.",
+            "example": "242185910336"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
           }
         }
       },
@@ -35089,7 +35385,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "A three-letter ISO currency code.",
+            "description": "A three-letter ISO currency code that determines what currency the cost of each shipping quote is converted into.",
             "example": "USD"
           },
           "shipTo": {

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** | Shipping quote identifier | [optional]
 **description** | **string** | Shipping method description | [optional]
 **service_level** | **string** |  | [optional]
-**estimated_delivery** | **string** |  | [optional]
+**delivery_information** | [**\DigitalRiver\ApiSdk\Model\DeliveryInformation**](DeliveryInformation.md) |  | [optional]
 **shipping_terms** | **string** | The terms of shipping. | [optional]
 **total_amount** | **float** | The shipping amount. | [optional]
 **ship_from** | [**\DigitalRiver\ApiSdk\Model\GLShipFrom**](GLShipFrom.md) |  | [optional]

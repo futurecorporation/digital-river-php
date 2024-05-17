@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **items** | [**\DigitalRiver\ApiSdk\Model\LineItem[]**](LineItem.md) |  | [optional]
 **state** | **string** | The current state of the fulfillment order. | [optional] [readonly]
 **live_mode** | **bool** | Has the value true if the object exists in live mode or the value false if the object exists in test mode. | [optional]
+**metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

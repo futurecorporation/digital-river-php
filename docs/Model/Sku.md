@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **weight** | **float** | The weight of the product measured in the unit specified by weightUnit. | [optional]
 **weight_unit** | **string** | The unit of measurement applied to the weight. | [optional]
 **item_breadcrumb** | **string** | The full path to the category where item is included. Categories should be separated by “ &gt; “. | [optional]
+**partner_account_id** | **string** | The unique, Digital River identifier (account Id) of the partner associated with the sku. | [optional]
 **live_mode** | **bool** | Has the value &lt;code&gt;true&lt;/code&gt; if the object exists in live mode or the value &lt;code&gt;false&lt;/code&gt; if the object exists in test mode. | [optional]
 **metadata** | **array<string,mixed>** | Key-value pairs used to store additional data. Value can be string, boolean or integer types. | [optional]
 **updated_time** | **\DateTime** | The time when the SKU was last updated. | [optional] [readonly]
