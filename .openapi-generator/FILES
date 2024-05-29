@@ -650,10 +650,3 @@ lib/Model/WeekendService.php
 lib/Model/WireTransfer.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/DeliveryInformationTest.php
-test/Model/EstimatedArrivalTest.php
-test/Model/OrderItemsTest.php
-test/Model/OrderTaxDetailsTest.php
-test/Model/OrderTaxesTest.php
-test/Model/UpdateOrderItemsTest.php
-test/Model/WeekendServiceTest.php
